@@ -44,10 +44,17 @@
         <!-- top-nav-->
         <div class="row">
           <div class="top-search hidden-xs col-sm-3">
-            <div class="mod_search">
-              <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
-                <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
-              </form>
+            <div id="live-search">
+              <div class="live-search">
+                <form method="post" action="example-search-results.json"><i class="icon icon-gl_icos-38"></i>
+                  <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
+                </form>
+                <div class="search-results">
+                  <div class="load"></div>
+                  <ul class="autocompletion"></ul>
+                  <ul class="results"></ul>
+                </div>
+              </div>
             </div>
           </div>
           <!-- top-search-->
@@ -97,7 +104,7 @@
                       </div>
                       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
                         <div class="row">
-                          <botton data-toggle="modal" data-target="#back-call" class="btn btn-call btn-bright-color">
+                          <botton onclick="$.colorbox({fixed: false, html: $('#modal-back-call').html()});" class="btn btn-call btn-bright-color">
                             <div class="label">Обратный звонок</div>
                           </botton>
                         </div>
@@ -136,7 +143,7 @@
               </div>
               <div class="col-xs-4">
                 <div class="row">
-                  <botton class="btn search-icon">
+                  <botton onclick="$.colorbox({fixed: false, html: $('#live-search').html(),onComplete:function(){$.colorbox.resize_auto();change_type()}});" class="btn search-icon">
                     <div class="row"><i class="icon icon-gl_icos-38 size icon-2 text-center"></i></div>
                   </botton>
                 </div>
@@ -190,6 +197,7 @@
       <div class="container">
         <div class="reverse">
           <div class="row section-row">
+            <!-- ! Common: Category Section-->
             <div class="category-section"><a href="#" class="item active clearfix">
                 <div class="image col-xs-4 col-sm-12 text-center">
                   <div class="row">
@@ -358,272 +366,286 @@
           </div>
           <!-- .slider-section-->
         </div>
-        <div class="advantages-section row section-row hidden-xs">
-          <div class="h4 side-header">ПОЧЕМУ МЫ?</div>
-          <div class="side-box">
-            <div class="item">
-              <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-9 size icon-4"></i>
-                <div class="label">Доставка <br>в течении 3 часов</div>
+        <div class="row section-row hidden-xs">
+          <!-- ! Common: advantages-section-->
+          <div class="advantages-section">
+            <div class="h4 side-header">ПОЧЕМУ МЫ?</div>
+            <div class="side-box">
+              <div class="item">
+                <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-9 size icon-4"></i>
+                  <div class="label">Доставка <br>в течении 3 часов</div>
+                </div>
               </div>
-            </div>
-            <div class="item hidden-sm">
-              <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-10 size icon-4"></i>
-                <div class="label">Проверка <br>качества каждой гитары</div>
+              <div class="item hidden-sm">
+                <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-10 size icon-4"></i>
+                  <div class="label">Проверка <br>качества каждой гитары</div>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-11 size icon-4"></i>
-                <div class="label">Самые  <br>низкие цены </div>
+              <div class="item">
+                <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-11 size icon-4"></i>
+                  <div class="label">Самые  <br>низкие цены </div>
+                </div>
               </div>
-            </div>
-            <div class="item hidden-sm">
-              <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-12 size icon-4"></i>
-                <div class="label">Тысячи  <br>довольных клиентов</div>
+              <div class="item hidden-sm">
+                <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-12 size icon-4"></i>
+                  <div class="label">Тысячи  <br>довольных клиентов</div>
+                </div>
               </div>
-            </div>
-            <div class="item">
-              <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-13 size icon-4"></i>
-                <div class="label">Чехол  <br>в подарок</div>
+              <div class="item">
+                <div class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-13 size icon-4"></i>
+                  <div class="label">Чехол  <br>в подарок</div>
+                </div>
               </div>
             </div>
           </div>
+          <!-- .advantages-section-->
         </div>
-        <!-- advantages-section-->
         <hr class="fatty">
-        <div class="horizontal-filter-section row section-row">
-          <div class="col-lg-3">
-            <div class="header row">
-              <h4>Популярные товары</h4>
-            </div>
-          </div>
-          <div class="col-lg-9">
-            <form class="horizontal-filter row">
-              <div class="filter-category pull-left hidden-xs">
-                <div class="item">
-                  <input id="item1" type="radio" name="filter-category" value="item1" autocomplete="off" checked>
-                  <label for="item1">Акустические</label>
-                </div>
-                <div class="item">
-                  <input id="item2" type="radio" name="filter-category" value="item2" autocomplete="off">
-                  <label for="item2">Классические</label>
-                </div>
-                <div class="item">
-                  <input id="item3" type="radio" name="filter-category" value="item3" autocomplete="off">
-                  <label for="item3">Электрические</label>
-                </div>
-                <div class="item">
-                  <input id="item4" type="radio" name="filter-category" value="item4" autocomplete="off">
-                  <label for="item4">Бас-гитары</label>
-                </div>
-                <div class="item">
-                  <input id="item5" type="radio" name="filter-category" value="item5" autocomplete="off">
-                  <label for="item5">Все</label>
-                </div>
-              </div>
-              <div class="filter-sort pull-right"><span>Сортировать:  </span>
-                <select autocomplete="off" class="styler">
-                  <option>От дешевых к дорогим</option>
-                  <option selected>От дорогих к дешевым</option>
-                </select>
-              </div>
-              <div class="clearfix"></div>
-            </form>
-            <!-- horizontal-filter-->
-          </div>
-        </div>
         <div class="row section-row">
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+          <!-- ! Module: Horizontal Filter-->
+          <div class="horizontal-filter-section">
+            <div class="col-lg-3">
+              <div class="header row">
+                <h4>Популярные товары</h4>
               </div>
-              <div class="price">
-                <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
-                <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
+            </div>
+            <div class="col-lg-9">
+              <div class="horizontal-filter row js-filters">
+                <div class="filter-category pull-left hidden-xs">
+                  <div class="item">
+                    <label class="radio checked">
+                      <input type="checkbox"> Акустические
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label class="radio">
+                      <input type="checkbox"> Классические
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label class="radio">
+                      <input type="checkbox"> Электрические
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label class="radio">
+                      <input type="checkbox"> Бас-гитары
+                    </label>
+                  </div>
+                  <div class="item">
+                    <label class="radio">
+                      <input type="checkbox"> Все
+                    </label>
+                  </div>
+                </div>
+                <div class="filter-sort pull-right"><span>Сортировать:</span>
+                  <div class="dropdown filters js-df-filters"><a data-toggle="dropdown" href="javascript:eval();" class="dropdown-toggle"><span class="js-df-name green dotted">по возрастанию цены</span><span class="icon icon-gl_icos-14"></span></a>
+                    <input id="flag" value="price.asc" data-filter-s="o" type="hidden" class="js-df-flag">
+                    <div style="" class="dropdown-menu">
+                      <div class="dropdown-inner">
+                        <button data-value="p.sort_first.desc" class="js-df">по популярности</button>
+                        <button data-value="price.asc" class="js-df">по возрастанию цены</button>
+                        <button data-value="price.desc" class="js-df">по убыванию цены</button>
+                        <button data-value="name.asc" class="js-df">по наименованию</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
             </div>
           </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price">
-                <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
-                <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
-              </div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price">
-                <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
-                <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
-              </div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price">
-                <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
-                <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
-              </div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price">
-                <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
-                <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
-              </div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
-              <div class="buy-button">
-                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
+          <!-- horizontal-filter-->
         </div>
-        <div class="row text-center">
-          <div class="inline-block">
-            <botton class="btn btn-brand-gradient">
-              <div class="label">ПОКАЗАТЬ ЕЩЕ</div>
-            </botton>
+        <div class="row">
+          <!-- ! Common: Products Section-->
+          <div class="products-section">
+            <div class="row">
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price">
+                    <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
+                    <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
+                  </div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price">
+                    <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
+                    <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
+                  </div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price">
+                    <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
+                    <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
+                  </div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price">
+                    <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
+                    <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
+                  </div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price">
+                    <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
+                    <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
+                  </div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-product">
+                <div class="card-product"><a href="#" class="title">Prado HS 3805 BK</a>
+                  <div class="image">
+                    <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
+                  </div>
+                  <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
+                  <div class="buy-button">
+                    <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                      <div class="label">Купить</div>
+                    </botton>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center"><br>
+              <div class="inline-block">
+                <botton class="btn btn-brand-gradient">
+                  <div class="label">ПОКАЗАТЬ ЕЩЕ</div>
+                </botton>
+              </div>
+            </div>
           </div>
+          <!-- .products-section-->
         </div>
         <hr class="fatty">
         <div class="row section-row">
@@ -693,6 +715,7 @@
           </div>
           <div class="col-md-6 col-md-pull-6">
             <h4 class="header">Отзывы клиентов</h4>
+            <!-- ! Module: Reviews-->
             <div id="review-carusel" class="reviews">
               <div class="review">
                 <div class="row">
@@ -728,6 +751,7 @@
                 </botton>
               </div>
             </div>
+            <!-- .reviews-->
           </div>
         </div>
         <!-- reviews-section-->
@@ -852,12 +876,25 @@
           </ul>
         </div>
         <!-- sidenav-menu-->
+        <div class="sidenav-nav">
+          <botton onclick="$.colorbox({fixed: false, html: $('#modal-city').html()});" class="btn btn-external-reset-styles btn-city"><i class="icon icon-gl_icos-27"></i>
+            <div class="label">Москва</div>
+          </botton>
+          <ul class="nav">
+            <li class="active"><a href="#">О компании</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акция!</a></li>
+            <li><a href="#">Опт</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- #sidenav-->
     <!-- ! * Back Call *-->
-    <div id="back-call" tabindex="-1" role="dialog" aria-labelledby="back-call" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-back-call" tabindex="-1" role="dialog" aria-labelledby="modal-back-call" aria-hidden="true" class="modal fade">
+      <div class="modal-back-call modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -887,8 +924,8 @@
       </div>
     </div>
     <!-- ! * Buy Single Click *-->
-    <div id="buy-single-click" tabindex="-1" role="dialog" aria-labelledby="buy-single-click" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-buy-single-click" tabindex="-1" role="dialog" aria-labelledby="modal-buy-single-click" aria-hidden="true" class="modal fade">
+      <div class="modal-buy-single-click modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -916,8 +953,8 @@
       </div>
     </div>
     <!-- ! * Added To Cart. *-->
-    <div id="added-to-cart" tabindex="-1" role="dialog" aria-labelledby="added-to-cart" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-added-to-cart" tabindex="-1" role="dialog" aria-labelledby="modal-added-to-cart" aria-hidden="true" class="modal fade">
+      <div class="modal-added-to-cart modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -940,7 +977,7 @@
               </div>
               <div class="col-xs-6">
                 <div class="row">
-                  <botton data-dismiss="modal" class="btn btn-bright-color">
+                  <botton data-dismiss="modal" onclick="jQuery('#cboxClose').click();" class="btn btn-bright-color">
                     <div class="label">Продолжить покупки</div>
                   </botton>
                 </div>
@@ -971,87 +1008,70 @@
         </form>
       </div>
     </div>
-    <div class="container">
-      <!-- ! * search-results *-->
-      <div class="search-results">
-        <ul class="autocompletion">
-          <p>Ничните вводить</p>
-        </ul>
-        <ul class="results">
-          <p>Ничните вводить</p>
-        </ul>
-        <div class="test"></div>
+    <!-- ! * Modal City *-->
+    <div id="modal-city" tabindex="-1" role="dialog" aria-labelledby="modal-city" aria-hidden="true" class="modal fade">
+      <div class="modal-city modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Выбрать город</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <ul>
+              <li><a href="#">Серов</a></li>
+              <li><a href="#">Серпухов</a></li>
+              <li><a href="#">Сертолово</a></li>
+              <li class="active"><a href="#">Москва</a></li>
+              <li><a href="#">Славянск-на-Кубани</a></li>
+              <li><a href="#">Снежинск</a></li>
+              <li><a href="#">Сокол</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Modal Success*-->
+    <div id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true" class="modal fade">
+      <div class="modal-success modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <p class="size preview-1"><span class="icon icon-gl_icos-37"></span></p>
+              <div class="h">Успешно</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <p>Окно автоматически закроется через<br>через 3 секунды</p>
+          </div>
+        </form>
       </div>
     </div>
     <!-- ! * Scripts * -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="catalog/view/javascript/myjs.js"></script>
+    <script src="catalog/view/javascript/radio.js"></script>
     <script src="catalog/view/javascript/sfilter.js"></script>
-    <script src="catalog/view/theme/GitarLand/assets/lib/jQueryFormStyler-master/jquery.formstyler.js"></script>
     <script src="catalog/view/theme/GitarLand/assets/js/user.js"></script>
     <script src="catalog/view/theme/GitarLand/assets/js/action.js"></script>
     <script type="text/javascript">
-      // Action OwlCarousel
-       $(document).ready(function() {
-         $("#home-slider").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-         $("#review-slider").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-         $("#review-carusel").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-       });
+      //Вызываем все добавленные в массив функции
+      if(readyjs)
+      for(var i=0; i < readyjs.length; i++)
+      setTimeout(readyjs[i]);
       
-       // Action jQuery Form Styler
-       $(document).ready(function() {
-         $('.styler').styler({
-           selectSmartPositioning: false
-         });
-       });
-       
-       // Action jquery.maskedinput.js
-       $(document).ready(function() {
-          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__");
-       });
       
-       // Action Colorbox
-         $(document).ready(function(){
-             //Examples of how to assign the Colorbox event to elements
-             $(".group1").colorbox({rel:'group1'});
-             $(".group2").colorbox({rel:'group2', transition:"fade"});
-             $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
-             $(".group4").colorbox({rel:'group4', slideshow:true});
-             $(".ajax").colorbox();
-             $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-             $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
-             $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
-             $(".inline").colorbox({inline:true, width:"50%"});
-             $(".callbacks").colorbox({
-             onOpen:function(){ alert('onOpen: colorbox is about to open'); },
-             onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
-             onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
-             onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
-             onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
-             });
-             $('.non-retina').colorbox({rel:'group5', transition:'none'})
-             $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-             //Example of preserving a JavaScript event for inline calls.
-             $("#click").click(function(){
-             $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-             return false;
-           });
-         });
+      // Фикс для  СolorBox
+      $(document).bind('cbox_complete', function() {
+          $.colorbox.resize(); // <- Что бы нормально высата опрелелась
+          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__"); // <- что бы маска телефона работала
+          change_type();
+          if(readyjs)
+          for(var i=0; i < readyjs.length; i++)
+          setTimeout(readyjs[i]);
+      });
     </script>
     <!-- End body-->
   </body>

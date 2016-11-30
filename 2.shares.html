@@ -44,10 +44,17 @@
         <!-- top-nav-->
         <div class="row">
           <div class="top-search hidden-xs col-sm-3">
-            <div class="mod_search">
-              <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
-                <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
-              </form>
+            <div id="live-search">
+              <div class="live-search">
+                <form method="post" action="example-search-results.json"><i class="icon icon-gl_icos-38"></i>
+                  <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
+                </form>
+                <div class="search-results">
+                  <div class="load"></div>
+                  <ul class="autocompletion"></ul>
+                  <ul class="results"></ul>
+                </div>
+              </div>
             </div>
           </div>
           <!-- top-search-->
@@ -97,7 +104,7 @@
                       </div>
                       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
                         <div class="row">
-                          <botton data-toggle="modal" data-target="#back-call" class="btn btn-call btn-bright-color">
+                          <botton onclick="$.colorbox({fixed: false, html: $('#modal-back-call').html()});" class="btn btn-call btn-bright-color">
                             <div class="label">Обратный звонок</div>
                           </botton>
                         </div>
@@ -136,7 +143,7 @@
               </div>
               <div class="col-xs-4">
                 <div class="row">
-                  <botton class="btn search-icon">
+                  <botton onclick="$.colorbox({fixed: false, html: $('#live-search').html(),onComplete:function(){$.colorbox.resize_auto();change_type()}});" class="btn search-icon">
                     <div class="row"><i class="icon icon-gl_icos-38 size icon-2 text-center"></i></div>
                   </botton>
                 </div>
@@ -189,16 +196,20 @@
     <section id="PageContent" class="Shares-Template">
       <div class="container">
         <div class="row section-row">
+          <!-- ! Components: breadcrumbs-->
           <nav class="breadcrumbs"> 
-            <ul>
-              <li> <span>Главная</span></li>
-              <li><a href="#">Внутренняя страница</a></li>
-            </ul>
+            <ol>
+              <li><a href="/">Главная</a></li>
+              <li><a href="http://schema.org/BreadcrumbList">Родительская страница</a></li>
+              <li><a href="http://schema.org/BreadcrumbList">Текущая страница</a></li>
+            </ol>
           </nav>
-        </div>
-        <div class="row section-row">
-          <h2>Акции</h2>
-          <hr>
+          <!-- breadcrumbs-->
+          <article>
+            <h2>Акции</h2>
+            <hr class="fatty">
+            <p>За годы успешной деятельности наша компания разработала особую систему скидок и акций, которые обязательно придутся по вкусу клиентам. Мы всегда рады пойти навстречу нашим постоянным покупателям, которым дополнительные бонусы будут вдвойне полезны. Поэтому представляем вам ряд выгодных акций, среди которых:</p>
+          </article>
         </div>
       </div>
     </section>
@@ -321,12 +332,25 @@
           </ul>
         </div>
         <!-- sidenav-menu-->
+        <div class="sidenav-nav">
+          <botton onclick="$.colorbox({fixed: false, html: $('#modal-city').html()});" class="btn btn-external-reset-styles btn-city"><i class="icon icon-gl_icos-27"></i>
+            <div class="label">Москва</div>
+          </botton>
+          <ul class="nav">
+            <li class="active"><a href="#">О компании</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акция!</a></li>
+            <li><a href="#">Опт</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- #sidenav-->
     <!-- ! * Back Call *-->
-    <div id="back-call" tabindex="-1" role="dialog" aria-labelledby="back-call" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-back-call" tabindex="-1" role="dialog" aria-labelledby="modal-back-call" aria-hidden="true" class="modal fade">
+      <div class="modal-back-call modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -356,8 +380,8 @@
       </div>
     </div>
     <!-- ! * Buy Single Click *-->
-    <div id="buy-single-click" tabindex="-1" role="dialog" aria-labelledby="buy-single-click" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-buy-single-click" tabindex="-1" role="dialog" aria-labelledby="modal-buy-single-click" aria-hidden="true" class="modal fade">
+      <div class="modal-buy-single-click modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -385,8 +409,8 @@
       </div>
     </div>
     <!-- ! * Added To Cart. *-->
-    <div id="added-to-cart" tabindex="-1" role="dialog" aria-labelledby="added-to-cart" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-added-to-cart" tabindex="-1" role="dialog" aria-labelledby="modal-added-to-cart" aria-hidden="true" class="modal fade">
+      <div class="modal-added-to-cart modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -409,7 +433,7 @@
               </div>
               <div class="col-xs-6">
                 <div class="row">
-                  <botton data-dismiss="modal" class="btn btn-bright-color">
+                  <botton data-dismiss="modal" onclick="jQuery('#cboxClose').click();" class="btn btn-bright-color">
                     <div class="label">Продолжить покупки</div>
                   </botton>
                 </div>
@@ -440,87 +464,70 @@
         </form>
       </div>
     </div>
-    <div class="container">
-      <!-- ! * search-results *-->
-      <div class="search-results">
-        <ul class="autocompletion">
-          <p>Ничните вводить</p>
-        </ul>
-        <ul class="results">
-          <p>Ничните вводить</p>
-        </ul>
-        <div class="test"></div>
+    <!-- ! * Modal City *-->
+    <div id="modal-city" tabindex="-1" role="dialog" aria-labelledby="modal-city" aria-hidden="true" class="modal fade">
+      <div class="modal-city modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Выбрать город</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <ul>
+              <li><a href="#">Серов</a></li>
+              <li><a href="#">Серпухов</a></li>
+              <li><a href="#">Сертолово</a></li>
+              <li class="active"><a href="#">Москва</a></li>
+              <li><a href="#">Славянск-на-Кубани</a></li>
+              <li><a href="#">Снежинск</a></li>
+              <li><a href="#">Сокол</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Modal Success*-->
+    <div id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true" class="modal fade">
+      <div class="modal-success modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <p class="size preview-1"><span class="icon icon-gl_icos-37"></span></p>
+              <div class="h">Успешно</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <p>Окно автоматически закроется через<br>через 3 секунды</p>
+          </div>
+        </form>
       </div>
     </div>
     <!-- ! * Scripts * -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="catalog/view/javascript/myjs.js"></script>
+    <script src="catalog/view/javascript/radio.js"></script>
     <script src="catalog/view/javascript/sfilter.js"></script>
-    <script src="catalog/view/theme/GitarLand/assets/lib/jQueryFormStyler-master/jquery.formstyler.js"></script>
     <script src="catalog/view/theme/GitarLand/assets/js/user.js"></script>
     <script src="catalog/view/theme/GitarLand/assets/js/action.js"></script>
     <script type="text/javascript">
-      // Action OwlCarousel
-       $(document).ready(function() {
-         $("#home-slider").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-         $("#review-slider").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-         $("#review-carusel").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-       });
+      //Вызываем все добавленные в массив функции
+      if(readyjs)
+      for(var i=0; i < readyjs.length; i++)
+      setTimeout(readyjs[i]);
       
-       // Action jQuery Form Styler
-       $(document).ready(function() {
-         $('.styler').styler({
-           selectSmartPositioning: false
-         });
-       });
-       
-       // Action jquery.maskedinput.js
-       $(document).ready(function() {
-          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__");
-       });
       
-       // Action Colorbox
-         $(document).ready(function(){
-             //Examples of how to assign the Colorbox event to elements
-             $(".group1").colorbox({rel:'group1'});
-             $(".group2").colorbox({rel:'group2', transition:"fade"});
-             $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
-             $(".group4").colorbox({rel:'group4', slideshow:true});
-             $(".ajax").colorbox();
-             $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-             $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
-             $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
-             $(".inline").colorbox({inline:true, width:"50%"});
-             $(".callbacks").colorbox({
-             onOpen:function(){ alert('onOpen: colorbox is about to open'); },
-             onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
-             onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
-             onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
-             onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
-             });
-             $('.non-retina').colorbox({rel:'group5', transition:'none'})
-             $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-             //Example of preserving a JavaScript event for inline calls.
-             $("#click").click(function(){
-             $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-             return false;
-           });
-         });
+      // Фикс для  СolorBox
+      $(document).bind('cbox_complete', function() {
+          $.colorbox.resize(); // <- Что бы нормально высата опрелелась
+          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__"); // <- что бы маска телефона работала
+          change_type();
+          if(readyjs)
+          for(var i=0; i < readyjs.length; i++)
+          setTimeout(readyjs[i]);
+      });
     </script>
     <!-- End body-->
   </body>

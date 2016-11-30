@@ -44,10 +44,17 @@
         <!-- top-nav-->
         <div class="row">
           <div class="top-search hidden-xs col-sm-3">
-            <div class="mod_search">
-              <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
-                <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
-              </form>
+            <div id="live-search">
+              <div class="live-search">
+                <form method="post" action="example-search-results.json"><i class="icon icon-gl_icos-38"></i>
+                  <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
+                </form>
+                <div class="search-results">
+                  <div class="load"></div>
+                  <ul class="autocompletion"></ul>
+                  <ul class="results"></ul>
+                </div>
+              </div>
             </div>
           </div>
           <!-- top-search-->
@@ -97,7 +104,7 @@
                       </div>
                       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
                         <div class="row">
-                          <botton data-toggle="modal" data-target="#back-call" class="btn btn-call btn-bright-color">
+                          <botton onclick="$.colorbox({fixed: false, html: $('#modal-back-call').html()});" class="btn btn-call btn-bright-color">
                             <div class="label">Обратный звонок</div>
                           </botton>
                         </div>
@@ -136,7 +143,7 @@
               </div>
               <div class="col-xs-4">
                 <div class="row">
-                  <botton class="btn search-icon">
+                  <botton onclick="$.colorbox({fixed: false, html: $('#live-search').html(),onComplete:function(){$.colorbox.resize_auto();change_type()}});" class="btn search-icon">
                     <div class="row"><i class="icon icon-gl_icos-38 size icon-2 text-center"></i></div>
                   </botton>
                 </div>
@@ -187,63 +194,143 @@
     </div>
     <!-- common-categories-->
     <section id="PageContent">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/atom-one-light.min.css" rel="stylesheet">
+      <script type="text/javascript">
+        if(readyjs) readyjs[readyjs.length] = function(){
+          $(document).ready(function() {
+            $('code').each(function(i, block) {
+              hljs.highlightBlock(block);
+            });
+          });
+        };
+        
+      </script>
+      <style>
+        code {
+          display: inline-block !important;
+          white-space: pre;
+          vertical-align: middle;
+          margin: 0 4px;  }
+        
+        
+        
+      </style>
+      <div class="dropdown filters js-df-filters"><a data-toggle="dropdown" href="javascript:eval();" class="dropdown-toggle"><span class="js-df-name green dotted">&pcy;&ocy; &vcy;&ocy;&zcy;&rcy;&acy;&scy;&tcy;&acy;&ncy;&icy;&yucy; &tscy;&iecy;&ncy;&ycy;</span><span class="icon icon-triangle green"></span></a>
+        <input id="flag" value="price.asc" data-filter-s="o" type="hidden" class="js-df-flag">
+        <div style="" class="dropdown-menu">
+          <div class="dropdown-inner">
+            <button data-value="p.sort_first.desc" class="js-df">&pcy;&ocy; &pcy;&ocy;&pcy;&ucy;&lcy;&yacy;&rcy;&ncy;&ocy;&scy;&tcy;&icy;</button>
+            <button data-value="price.asc" class="js-df js-df-active">&pcy;&ocy; &vcy;&ocy;&zcy;&rcy;&acy;&scy;&tcy;&acy;&ncy;&icy;&yucy; &tscy;&iecy;&ncy;&ycy;</button>
+            <button data-value="price.desc" class="js-df">&pcy;&ocy; &ucy;&bcy;&ycy;&vcy;&acy;&ncy;&icy;&yucy; &tscy;&iecy;&ncy;&ycy;</button>
+            <button data-value="name.asc" class="js-df">&pcy;&ocy; &ncy;&acy;&icy;&mcy;&iecy;&ncy;&ocy;&vcy;&acy;&ncy;&icy;&yucy;</button>
+          </div>
+        </div>
+      </div>
       <h3 class="side-header">Модальные окна</h3>
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <div class="mod_search">
-              <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
+            <div class="live-search">
+              <form method="post" action="example-search-results.php"><i class="icon icon-gl_icos-38"></i>
                 <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
               </form>
+              <div class="search-results">
+                <div class="load">Загрузка...</div>
+                <ul class="autocompletion"></ul>
+                <ul class="results"></ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
+          <botton onclick="$.colorbox({fixed: false, html: $('#live-search').html(),onComplete:function(){$.colorbox.resize_auto();change_type()}});" class="btn">Поиск</botton><code>onclick="$.colorbox({fixed: false, html: $('#live-search').html(),onComplete:function(){$.colorbox.resize_auto();change_type()}});"</code>
           <botton onclick="openNav()" class="btn">Меню</botton><code>onclick='openNav()'</code>
-          <button data-toggle="modal" data-target="#back-call" class="btn">Обратный звонок</button><code>data-toggle='modal', data-target='#back-call'</code>
-          <button data-toggle="modal" data-target="#buy-single-click" class="btn">Купить в один клик</button><code>data-toggle='modal', data-target='#buy-single-click'</code>
-          <button data-toggle="modal" data-target="#added-to-cart" class="btn">Товар добавлен в корзину.</button><code>data-toggle='modal' data-target='#added-to-cart'</code>
+          <h4> ColorBox</h4>
+          <p>Сделал так что бы они были соместимы, нет времени полностью переделывать</p>
+          <botton onclick="$.colorbox({fixed: false, html: $('#modal-success').html()});" class="btn">Успешно</botton><code>onclick="$.colorbox({fixed: false, html: $('#modal-success').html()});"</code>
+          <botton onclick="$.colorbox({fixed: false, html: $('#modal-city').html()});" class="btn btn-city"><i class="icon icon-gl_icos-27"></i>
+            <div class="label">Москва</div>
+          </botton><code>onclick="$.colorbox({fixed: false, html: $('#modal-city').html()});"</code>
+          <button onclick="$.colorbox({fixed: false, html: $('#modal-back-call').html()});" class="btn">Обратный звонок</button><code>onclick="$.colorbox({fixed: false, html: $('#modal-back-call').html()});"</code>
+          <button onclick="$.colorbox({fixed: false, html: $('#modal-buy-single-click').html()});" class="btn">Купить в один клик</button><code>onclick="$.colorbox({fixed: false, html: $('#modal-buy-single-click').html()});"</code>
+          <button onclick="$.colorbox({fixed: false, html: $('#modal-added-to-cart').html()});" class="btn">Товар добавлен в корзину.</button><code>onclick="$.colorbox({fixed: false, html: $('#modal-added-to-cart').html()});"</code>
+          <h4>bootstrap</h4>
+          <button data-toggle="modal" data-target="#modal-back-call" class="btn">Обратный звонок</button><code>data-toggle='modal', data-target='#modal-back-call'</code>
+          <button data-toggle="modal" data-target="#modal-buy-single-click" class="btn">Купить в один клик</button><code>data-toggle='modal', data-target='#modal-buy-single-click'</code>
+          <button data-toggle="modal" data-target="#modal-added-to-cart" class="btn">Товар добавлен в корзину.</button><code>data-toggle='modal' data-target='#modal-added-to-cart'</code>
         </div>
         <div class="row">
-          <h4 class="side-header">Colorbox Demonstration
-            <h5>Elastic Transition</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group1">Grouped Photo 1</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group1">Grouped Photo 2</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group1">Grouped Photo 3</a></p>
-            <h5>Fade Transition</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee" class="group2">Grouped Photo 1</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group2">Grouped Photo 2</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group2">Grouped Photo 3</a></p>
-            <h5>No Transition + fixed width and height (75% of screen size)</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group3">Grouped Photo 1</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group3">Grouped Photo 2</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group3">Grouped Photo 3</a></p>
-            <h5>Slideshow</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group4">Grouped Photo 1</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group4">Grouped Photo 2</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group4">Grouped Photo 3</a></p>
-            <h5>Other Content Types</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/ajax.html" title="Homer Defined" class="ajax">Outside HTML (Ajax)</a></p>
-            <p><a href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent" class="youtube">Flash / Video (Iframe/Direct Link To YouTube)</a></p>
-            <p><a href="http://player.vimeo.com/video/2285902" title="Röyksopp: Remind Me" class="vimeo">Flash / Video (Iframe/Direct Link To Vimeo)</a></p>
-            <p><a href="http://wikipedia.com" class="iframe">Outside Webpage (Iframe)</a></p>
-            <p><a href="#inline_content" class="inline">Inline HTML</a></p>
-            <h5>Demonstration of using callbacks</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/marylou.jpg" title="Marylou on Cumberland Island" class="callbacks">Example with alerts</a>. Callbacks and event-hooks allow users to extend functionality without having to rewrite parts of the plugin.</p>
-            <h5>Retina Images</h5>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/daisy.jpg" title="Retina" class="retina">Retina</a></p>
-            <p><a href="http://www.jacklmoore.com/colorbox/content/daisy.jpg" title="Non-Retina" class="non-retina">Non-Retina</a></p>
-            <!-- This contains the hidden content for inline calls-->
-            <div style="display:none">
-              <div id="inline_content" style="padding:10px; background:#fff;">
-                <p><strong>This content comes from a hidden element on this page.</strong></p>
-                <p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
-                <p><a id="click" href="#" style="padding:5px; background:#ccc;">Click me, it will be preserved!</a></p>
-                <p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
-                <p>Updating Content Example:<br><a href="http://www.jacklmoore.com/colorbox/content/ajax.html" class="ajax">Click here to load new content</a></p>
-              </div>
+          <h4 class="side-header">Colorbox Demonstration</h4>
+          <script>
+            // Action Colorbox
+            if(readyjs) readyjs[readyjs.length] = function(){ 
+              $(document).ready(function(){
+                  //Examples of how to assign the Colorbox event to elements
+                  $(".group1").colorbox({rel:'group1'});
+                  $(".group2").colorbox({rel:'group2', transition:"fade"});
+                  $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+                  $(".group4").colorbox({rel:'group4', slideshow:true});
+                  $(".ajax").colorbox();
+                  $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+                  $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+                  $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+                  $(".inline").colorbox({inline:true, width:"50%"});
+                  $(".callbacks").colorbox({
+                  onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+                  onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+                  onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+                  onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+                  onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+                  });
+                  $('.non-retina').colorbox({rel:'group5', transition:'none'})
+                  $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+                  //Example of preserving a JavaScript event for inline calls.
+                  $("#click").click(function(){
+                  $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+                  return false;
+                });
+              });
+            };
+          </script>
+          <!-- script-->
+          <h5>Elastic Transition</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group1">Grouped Photo 1</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group1">Grouped Photo 2</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group1">Grouped Photo 3</a></p>
+          <h5>Fade Transition</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee" class="group2">Grouped Photo 1</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group2">Grouped Photo 2</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group2">Grouped Photo 3</a></p>
+          <h5>No Transition + fixed width and height (75% of screen size)</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group3">Grouped Photo 1</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group3">Grouped Photo 2</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group3">Grouped Photo 3</a></p>
+          <h5>Slideshow</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group4">Grouped Photo 1</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group4">Grouped Photo 2</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group4">Grouped Photo 3</a></p>
+          <h5>Other Content Types</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/ajax.html" title="Homer Defined" class="ajax">Outside HTML (Ajax)</a></p>
+          <p><a href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent" class="youtube">Flash / Video (Iframe/Direct Link To YouTube)</a></p>
+          <p><a href="http://player.vimeo.com/video/2285902" title="Röyksopp: Remind Me" class="vimeo">Flash / Video (Iframe/Direct Link To Vimeo)</a></p>
+          <p><a href="http://wikipedia.com" class="iframe">Outside Webpage (Iframe)</a></p>
+          <p><a href="#inline_content" class="inline">Inline HTML</a></p>
+          <h5>Demonstration of using callbacks</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/marylou.jpg" title="Marylou on Cumberland Island" class="callbacks">Example with alerts</a>. Callbacks and event-hooks allow users to extend functionality without having to rewrite parts of the plugin.</p>
+          <h5>Retina Images</h5>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/daisy.jpg" title="Retina" class="retina">Retina</a></p>
+          <p><a href="http://www.jacklmoore.com/colorbox/content/daisy.jpg" title="Non-Retina" class="non-retina">Non-Retina</a></p>
+          <!-- This contains the hidden content for inline calls-->
+          <div style="display:none">
+            <div id="inline_content" style="padding:40px 15px 10px; background:#fff;">
+              <p><strong>This content comes from a hidden element on this page.</strong></p>
+              <p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+              <p><a id="click" href="#" style="padding:5px; background:#ccc;">Click me, it will be preserved!</a></p>
+              <p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
+              <p>Updating Content Example:<br><a href="http://www.jacklmoore.com/colorbox/content/ajax.html" class="ajax">Click here to load new content</a></p>
             </div>
-          </h4>
+          </div>
         </div>
       </div>
       <h3 class="side-header">Примеры для плагина jQuery Form Styler</h3>
@@ -1129,9 +1216,9 @@
           <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Повстречался всемогущая грустный семантика даль текстами оксмокс ведущими lorem, имеет языком она, страну, речью вопрос бросил. Взобравшись журчит, точках грустный.</p>
           <h6>Заголовок 6</h6>
           <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Злых, языком свое рыбными силуэт прямо проектах заголовок, она безопасную предупреждал буквенных там. Дорогу путь ipsum, своего несколько, однажды свой.</p>
-          <h4 class="side-lined">Заголовкок  <small><code>.side-lined</code></small></h4>
-          <h4 class="page-header">Заголовкок  <small><code>.page-header</code></small></h4>
-          <p class="lead">Выделенный абзац <code>.lead</code></p>
+          <h4 class="side-lined">Заголовкок  </h4><code>.side-lined</code>
+          <h4 class="page-header">Заголовкок  </h4><code>.page-header</code>
+          <p class="lead">Выделенный абзац </p><code>.lead</code>
           <h2 class="side-lined">Параграфы</h2>
           <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Всемогущая правилами грустный на берегу осталось семь, текстов встретил они пустился буквенных, подзаголовок раз вершину свое свой речью выйти сбить там!</p>
           <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. На берегу решила родного приставка языком, взгляд своих, щеке продолжил. Парадигматическая выйти журчит напоивший текст эта, ее текстами знаках вопроса, вдали.</p>
@@ -1234,131 +1321,117 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
           <p class="box bg-warning">Etiam porta sem malesuada magna mollis euismod.  <code>.bg-warning</code></p>
           <p class="box bg-danger">Donec ullamcorper nulla non metus auctor fringilla.  <code>.bg-danger</code></p>
           <hr>
-          <h2 class="side-lined">Выравнивание</h2>
-          <h4> <code>.text-left</code></h4>
-          <p class="text-left"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Великий переулка города единственное большого однажды даже ручеек, текст первую букв текста возвращайся большой переписали маленькая семь пор о речью.</p>
-          <h4> <code>.text-right</code></h4>
-          <p class="text-right"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Запятых пояс, подзаголовок рекламных коварный реторический которое снова но необходимыми великий, жизни вопрос переписали строчка алфавит, сбить рыбного пустился рыбными.</p>
-          <h4> <code>.text-center</code></h4>
-          <p class="text-center"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет снова, диких если лучше что своего заглавных залетают свой безорфографичный послушавшись последний деревни ее подзаголовок о имени, обеспечивает родного!</p>
-          <h4> <code>.text-justify</code></h4>
-          <p class="text-justify"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Коварных путь рукопись они меня языком ее ipsum города назад рыбного, жизни которое себя инициал, знаках взгляд дороге однажды которой?</p>
-          <h4> <code>.text-nowrap</code></h4>
-          <p style="border: 1px solid #000;width: 200px;padding: 20px;" class="text-nowrap">Текст который не переносится на новую строку</p>
-          <h4> <code>.text-muted</code></h4>
+          <h2 class="side-lined">Выравнивание</h2><code>.text-left</code>
+          <p class="text-left"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Великий переулка города единственное большого однажды даже ручеек, текст первую букв текста возвращайся большой переписали маленькая семь пор о речью.</p><code>.text-right</code>
+          <p class="text-right"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Запятых пояс, подзаголовок рекламных коварный реторический которое снова но необходимыми великий, жизни вопрос переписали строчка алфавит, сбить рыбного пустился рыбными.</p><code>.text-center</code>
+          <p class="text-center"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет снова, диких если лучше что своего заглавных залетают свой безорфографичный послушавшись последний деревни ее подзаголовок о имени, обеспечивает родного!</p><code>.text-justify</code>
+          <p class="text-justify"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Коварных путь рукопись они меня языком ее ipsum города назад рыбного, жизни которое себя инициал, знаках взгляд дороге однажды которой?</p><code>.text-nowrap</code>
+          <p style="border: 1px solid #000;width: 200px;padding: 20px;" class="text-nowrap">Текст который не переносится на новую строку</p><code>.text-muted</code>
           <p class="text-muted"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предупредила толку однажды свою подпоясал, он скатился силуэт текст рукопись, знаках рыбного коварный точках, на берегу всеми безопасную о путь лучше.</p>
-          <blockquote>Цитата - <code>blockquote</code>
-            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Использовало ручеек великий выйти образ своего она предупредила живет, жизни речью, рыбного семь залетают за знаках журчит lorem себя силуэт.</p>
-          </blockquote>
+          <blockquote>Цитата - </blockquote><code>blockquote</code>
+          <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Использовало ручеек великий выйти образ своего она предупредила живет, жизни речью, рыбного семь залетают за знаках журчит lorem себя силуэт.</p>
           <h3 class="side-lined">Таблицы</h3>
           <div>
-            <div>
-              <h4>
-                 
-                Класс <code>.table </code><br><small><code>table.table>(thead>tr>th)+(tbody>tr>td)</code></small>
-              </h4>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Пользователь</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <hr>
-              <h4>Класс <code>.table-bordered</code><br><small><code>table.table.table-bordered>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Пользователь</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <hr>
-              <h4>Класс <code>.table-striped </code><br><small><code>table.table.table-striped>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Имя</th>
-                    <th>Фамилия</th>
-                    <th>Пользователь</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div>
-              <hr>
-              <h4>Класс <code>.table-hover </code><br><small><code>table.table.table-hover>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
+            <div></div><code>.table </code><br><code>table.table>(thead>tr>th)+(tbody>tr>td)</code>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Имя</th>
+                  <th>Фамилия</th>
+                  <th>Пользователь</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <hr><code>.table-bordered</code><code>table.table.table-bordered>(thead>tr>th)+(tbody>tr>td)</code>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Имя</th>
+                  <th>Фамилия</th>
+                  <th>Пользователь</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <hr><code>.table-striped </code><code>table.table.table-striped>(thead>tr>th)+(tbody>tr>td)</code>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Имя</th>
+                  <th>Фамилия</th>
+                  <th>Пользователь</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <hr><code>.table-hover </code><br><code>table.table.table-hover>(thead>tr>th)+(tbody>tr>td)
               <table class="table table-hover">
                 <thead>
                   <tr>
@@ -1388,11 +1461,10 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
                     <td>@twitter</td>
                   </tr>
                 </tbody>
-              </table>
-            </div>
+              </table></code>
             <div>
               <hr>
-              <h4>Адаптивные таблицы <code>.table-responsive</code><br><small><code>.table-responsive>table.table>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
+              <h4>Адаптивные таблицы </h4><code>.table-responsive</code><code>.table-responsive>table.table>(thead>tr>th)+(tbody>tr>td)</code>
               <div class="bs-example">
                 <div class="table-responsive">
                   <table class="table">
@@ -1442,27 +1514,17 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
             </div>
             <h3 class="side-lined">Зображения</h3>
           </div>
-          <div class="inline-block">
-            <h5> <code>img</code></h5><img src="http://placehold.it/150x150">
-          </div>
-          <div class="inline-block">
-            <h5> <code>.img-rounded</code></h5><img src="http://placehold.it/150x150" class="img-rounded">
-          </div>
-          <div class="inline-block">
-            <h5> <code>.img-thumbnail</code></h5><img src="http://placehold.it/150x150" class="img-thumbnail">
-          </div>
-          <div class="inline-block">
-            <h5> <code>.img-circle</code></h5><img src="http://placehold.it/150x150" class="img-circle">
-          </div>
-          <div class="inline-block">
-            <h5> <code>.img-responsive</code></h5><img src="http://placehold.it/150x150" class="img-responsive">
-          </div>
+          <div class="inline-block"><code>img</code><img src="http://placehold.it/150x150"></div>
+          <div class="inline-block"><code>.img-rounded</code><img src="http://placehold.it/150x150" class="img-rounded"></div>
+          <div class="inline-block"><code>.img-thumbnail</code><img src="http://placehold.it/150x150" class="img-thumbnail"></div>
+          <div class="inline-block"><code>.img-circle</code><img src="http://placehold.it/150x150" class="img-circle"></div>
+          <div class="inline-block"><code>.img-responsive</code><img src="http://placehold.it/150x150" class="img-responsive"></div>
           <h3 class="side-lined">Значки</h3>
-          <h5>Значек закрытия - <code>button.close</code></h5>
+          <h5>Значек закрытия - </h5><code>button.close</code>
           <div class="clearfix"></div>
           <button type="button" aria-hidden="true" class="close pull-left">&times;</button>
           <div class="clearfix"></div>
-          <h5>Значек меню - <code>span.caret</code></h5>
+          <h5>Значек меню - </h5><code>span.caret</code>
           <div class="clearfix"></div><span class="caret"></span>
           <h3 class="side-lined">Формы</h3>
           <form role="form" class="form-horizontal">
@@ -1620,12 +1682,25 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
           </ul>
         </div>
         <!-- sidenav-menu-->
+        <div class="sidenav-nav">
+          <botton onclick="$.colorbox({fixed: false, html: $('#modal-city').html()});" class="btn btn-external-reset-styles btn-city"><i class="icon icon-gl_icos-27"></i>
+            <div class="label">Москва</div>
+          </botton>
+          <ul class="nav">
+            <li class="active"><a href="#">О компании</a></li>
+            <li><a href="#">Доставка</a></li>
+            <li><a href="#">Оплата</a></li>
+            <li><a href="#">Акция!</a></li>
+            <li><a href="#">Опт</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <!-- #sidenav-->
     <!-- ! * Back Call *-->
-    <div id="back-call" tabindex="-1" role="dialog" aria-labelledby="back-call" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-back-call" tabindex="-1" role="dialog" aria-labelledby="modal-back-call" aria-hidden="true" class="modal fade">
+      <div class="modal-back-call modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -1655,8 +1730,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
       </div>
     </div>
     <!-- ! * Buy Single Click *-->
-    <div id="buy-single-click" tabindex="-1" role="dialog" aria-labelledby="buy-single-click" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-buy-single-click" tabindex="-1" role="dialog" aria-labelledby="modal-buy-single-click" aria-hidden="true" class="modal fade">
+      <div class="modal-buy-single-click modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -1684,8 +1759,8 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
       </div>
     </div>
     <!-- ! * Added To Cart. *-->
-    <div id="added-to-cart" tabindex="-1" role="dialog" aria-labelledby="added-to-cart" aria-hidden="true" class="modal fade">
-      <div class="modal-dialog">
+    <div id="modal-added-to-cart" tabindex="-1" role="dialog" aria-labelledby="modal-added-to-cart" aria-hidden="true" class="modal fade">
+      <div class="modal-added-to-cart modal-dialog">
         <form action="" class="modal-content">
           <div class="modal-header">
             <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
@@ -1708,7 +1783,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
               </div>
               <div class="col-xs-6">
                 <div class="row">
-                  <botton data-dismiss="modal" class="btn btn-bright-color">
+                  <botton data-dismiss="modal" onclick="jQuery('#cboxClose').click();" class="btn btn-bright-color">
                     <div class="label">Продолжить покупки</div>
                   </botton>
                 </div>
@@ -1739,87 +1814,70 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
         </form>
       </div>
     </div>
-    <div class="container">
-      <!-- ! * search-results *-->
-      <div class="search-results">
-        <ul class="autocompletion">
-          <p>Ничните вводить</p>
-        </ul>
-        <ul class="results">
-          <p>Ничните вводить</p>
-        </ul>
-        <div class="test"></div>
+    <!-- ! * Modal City *-->
+    <div id="modal-city" tabindex="-1" role="dialog" aria-labelledby="modal-city" aria-hidden="true" class="modal fade">
+      <div class="modal-city modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Выбрать город</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <ul>
+              <li><a href="#">Серов</a></li>
+              <li><a href="#">Серпухов</a></li>
+              <li><a href="#">Сертолово</a></li>
+              <li class="active"><a href="#">Москва</a></li>
+              <li><a href="#">Славянск-на-Кубани</a></li>
+              <li><a href="#">Снежинск</a></li>
+              <li><a href="#">Сокол</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Modal Success*-->
+    <div id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success" aria-hidden="true" class="modal fade">
+      <div class="modal-success modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <p class="size preview-1"><span class="icon icon-gl_icos-37"></span></p>
+              <div class="h">Успешно</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <p>Окно автоматически закроется через<br>через 3 секунды</p>
+          </div>
+        </form>
       </div>
     </div>
     <!-- ! * Scripts * -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="catalog/view/javascript/myjs.js"></script>
+    <script src="catalog/view/javascript/radio.js"></script>
     <script src="catalog/view/javascript/sfilter.js"></script>
-    <script src="catalog/view/theme/GitarLand/assets/lib/jQueryFormStyler-master/jquery.formstyler.js"></script>
     <script src="catalog/view/theme/GitarLand/assets/js/user.js"></script>
     <script src="catalog/view/theme/GitarLand/assets/js/action.js"></script>
     <script type="text/javascript">
-      // Action OwlCarousel
-       $(document).ready(function() {
-         $("#home-slider").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-         $("#review-slider").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-         $("#review-carusel").owlCarousel({
-             items: 1,
-             nav: true,
-             navText: ["",""],
-             autoplay: true
-         });
-       });
+      //Вызываем все добавленные в массив функции
+      if(readyjs)
+      for(var i=0; i < readyjs.length; i++)
+      setTimeout(readyjs[i]);
       
-       // Action jQuery Form Styler
-       $(document).ready(function() {
-         $('.styler').styler({
-           selectSmartPositioning: false
-         });
-       });
-       
-       // Action jquery.maskedinput.js
-       $(document).ready(function() {
-          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__");
-       });
       
-       // Action Colorbox
-         $(document).ready(function(){
-             //Examples of how to assign the Colorbox event to elements
-             $(".group1").colorbox({rel:'group1'});
-             $(".group2").colorbox({rel:'group2', transition:"fade"});
-             $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
-             $(".group4").colorbox({rel:'group4', slideshow:true});
-             $(".ajax").colorbox();
-             $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-             $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
-             $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
-             $(".inline").colorbox({inline:true, width:"50%"});
-             $(".callbacks").colorbox({
-             onOpen:function(){ alert('onOpen: colorbox is about to open'); },
-             onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
-             onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
-             onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
-             onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
-             });
-             $('.non-retina').colorbox({rel:'group5', transition:'none'})
-             $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
-             //Example of preserving a JavaScript event for inline calls.
-             $("#click").click(function(){
-             $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
-             return false;
-           });
-         });
+      // Фикс для  СolorBox
+      $(document).bind('cbox_complete', function() {
+          $.colorbox.resize(); // <- Что бы нормально высата опрелелась
+          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__"); // <- что бы маска телефона работала
+          change_type();
+          if(readyjs)
+          for(var i=0; i < readyjs.length; i++)
+          setTimeout(readyjs[i]);
+      });
     </script>
     <!-- End body-->
   </body>
