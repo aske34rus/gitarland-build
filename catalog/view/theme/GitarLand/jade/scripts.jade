@@ -1,0 +1,65 @@
+script(src="catalog/view/theme/GitarLand/assets/js/scripts-dist.js")
+// * ! scripts-dist.js include:
+         *      ./jquery-3.1.0.js
+         *      ../lib/OwlCarousel-SASS/owl.carousel.js
+         *      ./user.js
+         *      ./action.js
+script(type="text/javascript").
+  // * Side Nav *
+  function openNav() {
+      document.getElementById("overlay-element").style.display = "block";
+      document.getElementById("sidenav").style.right= "0";
+  }
+
+  function closeNav() {
+      document.getElementById("overlay-element").style.display = "none";
+      document.getElementById("sidenav").style.right = "-250px";
+  }
+script(type="text/javascript").
+  // * Sidenav Menu *
+  $(document).ready(function() {
+    $('.sidenav-menu .sub>a').click(function(event) {
+      $('.sidenav-menu>ul').css({
+        marginLeft: '-100%'
+      });
+      $(this).addClass('open');
+      return false;
+    });
+
+    $('.sidenav-menu .back>a').click(function() {
+      $('.sidenav-menu>ul').css({
+        marginLeft: '0'
+      });
+      $('.sidenav-menu .sub>a.open').removeClass('open');
+      return false;
+    });
+  });
+
+script(type="text/javascript").
+  $(document).ready(function() {
+    $("#home-slider").owlCarousel({
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        //- autoPlay : 5000,
+        navigationText:  ["",""]
+    });
+    $("#review-slider").owlCarousel({
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        //- autoPlay : 5000,
+        navigationText:  ["",""]
+    });
+    $("#review-carusel").owlCarousel({
+        theme : "review-carusel-theme",
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        //- autoPlay : 5000,
+        navigationText:  ["",""]
+    });
+  });

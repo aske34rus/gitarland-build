@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitarLand</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#ce4827">
+    <link rel="stylesheet" href="catalog/view/theme/GitarLand/assets/css/style-dist.css">
+  </head>
+  <body>
+    <!-- ! Common: Header-->
+    <header class="common-header">
+      <div class="top-header-bg">
+        <div class="container">
+          <div class="top-header visible-xs col-xs-12">
+            <div class="col-xs-6"> 
+              <div class="row">Круглосуточно</div>
+            </div>
+            <div class="col-xs-6">
+              <div class="row"><strong>Без Выходных</strong></div>
+            </div>
+          </div>
+          <!-- top-header-->
+        </div>
+      </div>
+      <!-- top-header-bg-->
+      <div class="container">
+        <div class="top-nav hidden-xs col-sm-9">
+          <div class="row">
+            <ul>
+              <li class="active"><a href="#">О компании</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Оплата</a></li>
+              <li><a href="#">Акция!</a></li>
+              <li><a href="#">Опт</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- top-nav-->
+        <div class="row">
+          <div class="top-search hidden-xs col-sm-3">
+            <div class="row">
+              <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
+                <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
+              </form>
+            </div>
+          </div>
+          <!-- top-search-->
+          <div class="top-content col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3">
+            <div class="row">
+              <div class="col-sm-8 col-md-9">
+                <div class="row">
+                  <div class="top-contacts col-xs-7 col-sm-12 col-md-8 col-lg-6">
+                    <div class="row">
+                      <div class="top-phones">
+                        <div class="col-xs-2 col-sm-1 col-md-2">
+                          <div class="row">
+                            <div class="phone-ico icon icon-gl_icos-21"></div>
+                          </div>
+                        </div>
+                        <div class="col-xs-10 col-sm-10 col-md-6">
+                          <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-12">
+                              <div class="row phone">8 (800) <span>800-00-80</span>
+                                <p class="visible-sm">Горячая линия</p>
+                              </div>
+                            </div>
+                            <div class="col-sm-6 col-md-12 hidden-xs">
+                              <div class="row phone">8 (800) <span>800-00-80</span>
+                                <p class="visible-sm">Горячая линия</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- top-phones-->
+                      <div class="top-social col-xs-11 hidden-sm col-md-4 col-xs-offset-2 col-sm-offset-0">
+                        <div class="row"><a href="whatsapp://send" data-text="АДРЕС_САЙТА" class="wa_btn"><i class="icon icon-gl_icos-36"></i>WhatsApp  </a><br class="hidden-xs"><a href="viber://forward?text=АДРЕС_САЙТА" class="wa_btn wa_btn_s"><i class="icon icon-gl_icos-36"></i>Viber</a></div>
+                      </div>
+                      <!-- top-social-->
+                    </div>
+                  </div>
+                  <!-- top-contacts-->
+                  <div class="top-bottons col-xs-5 col-sm-12 col-md-4 col-lg-6">
+                    <div class="row">
+                      <div class="hidden-xs hidden-sm col-md-12 col-lg-6 col-lg-push-6">
+                        <div class="row">
+                          <botton class="btn btn-price"><i class="icon icon-gl_icos-20"></i>
+                            <div class="label"><span>Скачать </span><br class="visible-lg"><b>Прайс-лист</b></div>
+                          </botton>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-lg-6 col-lg-pull-6">
+                        <div class="row">
+                          <botton class="btn btn-call btn-bright-color">
+                            <div class="label">Обратный звонок</div>
+                          </botton>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- top-bottons-->
+                </div>
+              </div>
+              <div class="top-cart hidden-xs col-sm-4 col-md-3">
+                <botton class="btn btn-cart btn-larger-icon"><i class="icon icon-gl_icos-19"><span>2</span></i>
+                  <div class="label"><span>КОРЗИНА</span><br><b>218,00 руб.</b></div>
+                </botton>
+              </div>
+              <!-- top-cart-->
+            </div>
+          </div>
+          <!-- top-content-->
+          <div class="top-logo col-xs-7 col-sm-4 col-sm-pull-8 col-md-3 col-md-pull-9">
+            <div class="row">
+              <div class="sprite sprite-logo-xs visible-xs"></div>
+              <div class="sprite sprite-logo-sm visible-sm"></div>
+              <div class="sprite sprite-logo-md visible-md"></div>
+              <div class="sprite sprite-logo-lg visible-lg"></div>
+            </div>
+          </div>
+          <!-- top-logo-->
+          <div class="top-xs-bottons text-center visible-xs col-xs-5">
+            <div class="row">
+              <div class="col-xs-4">
+                <div class="row">
+                  <botton onclick="openNav()" class="btn menu-icon">
+                    <div class="row"><i class="icon icon-gl_icos-40 size icon-2 text-center"></i></div>
+                  </botton>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="row">
+                  <botton class="btn search-icon">
+                    <div class="row"><i class="icon icon-gl_icos-38 size icon-2 text-center"></i></div>
+                  </botton>
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <div class="row">
+                  <botton class="btn cart-icon">
+                    <div class="row"><i class="icon icon-gl_icos-19 size icon-2 text-center"><span>2</span></i></div>
+                  </botton>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- top-xs-bottons-->
+        </div>
+        <!-- row-->
+      </div>
+      <!-- container-->
+    </header>
+    <!-- header-->
+    <!-- ! Common: Categories-->
+    <div class="common-categories hidden-xs">
+      <div class="container">
+        <div class="row">
+          <div class="menu">
+            <ul>
+              <li class="active"><a href="#">Акустические гитары</a>
+                <ul>
+                  <li><a href="#" class="active">Акустические гитары</a></li>
+                  <li><a href="#">Классические гитары</a></li>
+                  <li><a href="#">Электрогитары</a></li>
+                  <li><a href="#">Бас-гитары</a></li>
+                  <li><a href="#">Укулеле</a></li>
+                  <li><a href="#">Наши бренды</a></li>
+                  <li><a href="#">Аксессуары</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Классические гитары</a></li>
+              <li><a href="#">Электрогитары</a></li>
+              <li><a href="#">Бас-гитары</a></li>
+              <li><a href="#">Укулеле</a></li>
+              <li><a href="#">Наши бренды</a></li>
+              <li><a href="#">Аксессуары</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- common-categories-->
+    <section id="PageContent">
+      <h2 class="side-header">Вертикальная сетка для иконок и изображений</h2>
+      <div class="container">
+        <div class="row">
+          <p> <code>.size +</code> - только размер текста (удобно для шрифтовых иконок) <code>.size.icon-xs.screen-sm-icon-sm</code></p>
+          <p> <code>.height +</code>только высота (удобно для изображений и всего остального)<code>.height.icon-xs</code></p>
+          <p>Для всех включая мобильники<code>icon(или preview, image)-sm(или md, lg)</code></p>
+          <p>Индивидуально под разрешения<code>.screen-sm(или md, lg)-icon(или preview, image)-sm(или md, lg)</code></p>
+        </div>
+        <div class="row">
+          <div class="col-xs-1">
+            <p>16px</p>
+            <p><code>.icon-1</code></p>
+            <div class="box height icon-1"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>24px</p>
+            <p><code>.icon-2</code></p>
+            <div class="box height icon-2"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>32px</p>
+            <p><code>.icon-3</code></p>
+            <div class="box height icon-3"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>48px</p>
+            <p><code>.icon-4</code></p>
+            <div class="box height icon-4"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>64px</p>
+            <p><code>.preview-1</code></p>
+            <div class="box height preview-1"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>96px</p>
+            <p><code>.preview-2</code></p>
+            <div class="box height preview-2"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>128px</p>
+            <p><code>.preview-3</code></p>
+            <div class="box height preview-3"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>192px</p>
+            <p><code>.preview-4</code></p>
+            <div class="box height preview-4"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>256px</p>
+            <p><code>.image-1</code></p>
+            <div class="box height image-1"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>384px</p>
+            <p><code>.image-2</code></p>
+            <div class="box height image-2"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>512px</p>
+            <p><code>.image-3</code></p>
+            <div class="box height image-3"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+          <div class="col-xs-1">
+            <p>768px</p>
+            <p><code>.image-4</code></p>
+            <div class="box height image-4"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="side-header">Сетка слайдера</h2><br>
+      <div class="container">
+        <div class="row">
+          <div class="test col-xs-12 col-md-8">
+            <div class="row">
+              <div class="height preview-4 screen-sm-image-2"><img src="http://placehold.it/767x364" alt="" class="test"></div>
+            </div>
+          </div>
+          <div class="test hidden-xs col-sm-6 col-md-4">
+            <div class="row">
+              <div class="height preview-4"><img src="http://placehold.it/377x192" alt="" class="test"></div>
+            </div>
+          </div>
+          <div class="test hidden-xs col-sm-6 col-md-4">
+            <div class="row">
+              <div class="height preview-4"><img src="http://placehold.it/377x192" alt="" class="test"></div>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <h2 class="side-header">Обрезка изображений</h2>
+      <div class="container"><br><br><br>
+        <div class="row text-center">
+          <div class="col-sm-4">
+            <div class="crop preview-4 test">
+              <div class="outer">
+                <div class="inner"><img src="http://placehold.it/200x80"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="crop preview-4 test">
+              <div class="outer">
+                <div class="inner"><img src="http://placehold.it/200x120"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="crop preview-4 test">
+              <div class="outer">
+                <div class="inner"><img src="http://placehold.it/200x170"></div>
+              </div>
+            </div>
+          </div>
+        </div><br><br><br>
+      </div>
+      <h2 class="side-header">Спрайты</h2>
+      <div class="container">
+        <div class="row">
+          <h4>http://spritegen.website-performance.org/</h4>
+          <hr>
+        </div>
+        <div class="row">
+          <p><i class="sprite sprite-category-accessories"></i><code>i.sprite.sprite-category-accessories</code></p>
+          <p><i class="sprite sprite-category-bass-guitar"></i><code>i.sprite.sprite-category-bass-guitar</code></p>
+          <p><i class="sprite sprite-category-classic-guitar"></i><code>i.sprite.sprite-category-classic-guitar</code></p>
+          <p><i class="sprite sprite-category-electric-guitar"></i><code>i.sprite.sprite-category-electric-guitar</code></p>
+          <p><i class="sprite sprite-category-speakers-guitar"></i><code>i.sprite.sprite-category-speakers-guitar</code></p>
+          <p class="dark-bg"><i class="sprite sprite-logo-footer-xs"></i><code>i.sprite.sprite-logo-footer-xs</code></p>
+          <p><i class="sprite sprite-logo-lg"></i><code>i.sprite.sprite-logo-lg</code></p>
+          <p><i class="sprite sprite-logo-md"></i><code>i.sprite.sprite-logo-md</code></p>
+          <p><i class="sprite sprite-logo-sm"></i><code>i.sprite.sprite-logo-sm</code></p>
+          <p><i class="sprite sprite-logo-xs"></i><code>i.sprite.sprite-logo-xs</code></p>
+        </div>
+      </div>
+      <h2 class="side-header">Иконки</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-1 size icon-4"></i><code class="label">span.icon.icon-gl_icos-1</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-2 size icon-4"></i><code class="label">span.icon.icon-gl_icos-2</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-3 size icon-4"></i><code class="label">span.icon.icon-gl_icos-3</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-4 size icon-4"></i><code class="label">span.icon.icon-gl_icos-4</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-5 size icon-4"></i><code class="label">span.icon.icon-gl_icos-5</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-6 size icon-4"></i><code class="label">span.icon.icon-gl_icos-6</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-7 size icon-4"></i><code class="label">span.icon.icon-gl_icos-7</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-8 size icon-4"></i><code class="label">span.icon.icon-gl_icos-8</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-9 size icon-4"></i><code class="label">span.icon.icon-gl_icos-9</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-10 size icon-4"></i><code class="label">span.icon.icon-gl_icos-10</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-11 size icon-4"></i><code class="label">span.icon.icon-gl_icos-11</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-12 size icon-4"></i><code class="label">span.icon.icon-gl_icos-12</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-13 size icon-4"></i><code class="label">span.icon.icon-gl_icos-13</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-14 size icon-4"></i><code class="label">span.icon.icon-gl_icos-14</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-15 size icon-4"></i><code class="label">span.icon.icon-gl_icos-15</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-16 size icon-4"></i><code class="label">span.icon.icon-gl_icos-16</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-17 size icon-4"></i><code class="label">span.icon.icon-gl_icos-17</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-18 size icon-4"></i><code class="label">span.icon.icon-gl_icos-18</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-19 size icon-4"></i><code class="label">span.icon.icon-gl_icos-19</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-20 size icon-4"></i><code class="label">span.icon.icon-gl_icos-20</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-21 size icon-4"></i><code class="label">span.icon.icon-gl_icos-21</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-22 size icon-4"></i><code class="label">span.icon.icon-gl_icos-22</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-23 size icon-4"></i><code class="label">span.icon.icon-gl_icos-23</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-24 size icon-4"></i><code class="label">span.icon.icon-gl_icos-24</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-25 size icon-4"></i><code class="label">span.icon.icon-gl_icos-25</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-26 size icon-4"></i><code class="label">span.icon.icon-gl_icos-26</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-27 size icon-4"></i><code class="label">span.icon.icon-gl_icos-27</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-28 size icon-4"></i><code class="label">span.icon.icon-gl_icos-28</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-29 size icon-4"></i><code class="label">span.icon.icon-gl_icos-29</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-30 size icon-4"></i><code class="label">span.icon.icon-gl_icos-30</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-31 size icon-4"></i><code class="label">span.icon.icon-gl_icos-31</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-32 size icon-4"></i><code class="label">span.icon.icon-gl_icos-32</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-33 size icon-4"></i><code class="label">span.icon.icon-gl_icos-33</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-34 size icon-4"></i><code class="label">span.icon.icon-gl_icos-34</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-35 size icon-4"></i><code class="label">span.icon.icon-gl_icos-35</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-36 size icon-4"></i><code class="label">span.icon.icon-gl_icos-36</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-37 size icon-4"></i><code class="label">span.icon.icon-gl_icos-37</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-38 size icon-4"></i><code class="label">span.icon.icon-gl_icos-38</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-39 size icon-4"></i><code class="label">span.icon.icon-gl_icos-39</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-40 size icon-4"></i><code class="label">span.icon.icon-gl_icos-40</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-41 size icon-4"></i><code class="label">span.icon.icon-gl_icos-41</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-42 size icon-4"></i><code class="label">span.icon.icon-gl_icos-42</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-43 size icon-4"></i><code class="label">span.icon.icon-gl_icos-43</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-44 size icon-4"></i><code class="label">span.icon.icon-gl_icos-44</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-45 size icon-4"></i><code class="label">span.icon.icon-gl_icos-45</code></div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="btn"><i class="icon icon-gl_icos-46 size icon-4"></i><code class="label">span.icon.icon-gl_icos-46</code></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="side-header">Кнопки</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn">
+              <div class="label">Кнопка</div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn"><i class="icon icon-gl_icos-41"></i>
+              <div class="label">Кнопка <b>с иконкой</b></div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-41"></i>
+              <div class="label">Без внешних стилей</div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn btn-bright-color"> 
+              <div class="label">Обратный звонок</div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn btn-larger-icon"><i class="icon icon-gl_icos-19"><span class="icon icon-gl_icos-37"></span></i>
+              <div class="label">Кнопка с увеличенной конкой и чем то еще на ней в <code>span</code></div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn btn-big-icon"><i class="icon icon-gl_icos-19"><span class="icon icon-gl_icos-37"></span></i>
+              <div class="label">Кнопка с большой конкой и чем то еще на ней в <code>span</code></div>
+            </botton>
+            <botton class="btn btn-huge-icon"><i class="icon icon-gl_icos-19"><span class="icon icon-gl_icos-37"></span></i>
+              <div class="label">Кнопка с огромной конкой и чем то еще на ней в <code>span</code></div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton onclick="openNav()" class="btn menu-icon"><i class="icon icon-gl_icos-40"></i></botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton onclick="openNav()" class="btn"><i class="icon icon-gl_icos-40"></i>
+              <div class="label">Меню</div>
+            </botton>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <botton class="btn btn-brand-gradient"><i class="icon icon-gl_icos-37"></i>
+              <div class="label">C брендовым градиентом</div>
+            </botton>
+          </div>
+        </div>
+      </div>
+      <h2 class="side-header">Вертикальное меню для мобильной верссии</h2>
+      <div class="container">
+        <div class="row">
+          <h3><code>.sidenav-menu</code></h3>
+          <hr>
+          <div class="test">
+            <!-- ! Module: Side Menu-->
+            <div class="sidenav-menu">
+              <ul>
+                <li class="sub"><a href="#"><i class="icon icon-gl_icos-2"></i><span>АКУСТИЧЕСКИЕ ГИТАРЫ</span></a>
+                  <ul>
+                    <li class="back"><a href="#"><i class="icon icon-gl_icos-17"></i><span>АКУСТИЧЕСКИЕ ГИТАРЫ</span></a></li>
+                    <li><a href="#">Гитарные усилители</a></li>
+                    <li><a href="#">Гитары 12-струнные</a></li>
+                    <li><a href="#">Гитары акустические</a></li>
+                    <li><a href="#">Гитары детские (уменьшенные)</a></li>
+                    <li><a href="#">Гитары классические</a></li>
+                    <li><a href="#">Гитары электроакустические</a></li>
+                    <li><a href="#">Смотреть все </a></li>
+                  </ul>
+                </li>
+                <li class="sub"><a href="#"><i class="icon icon-gl_icos-43"></i><span>КЛАССИЧЕСКИЕ ГИТАРЫ</span></a>
+                  <ul>
+                    <li class="back"><a href="#"><i class="icon icon-gl_icos-17"></i><span>АКУСТИЧЕСКИЕ ГИТАРЫ</span></a></li>
+                    <li><a href="#">Гитарные усилители</a></li>
+                  </ul>
+                </li>
+                <li><a href=""><i class="icon icon-gl_icos-45"></i><span>ЭЛЕКТРОГИТАРЫ</span></a></li>
+                <li><a href=""><i class="icon icon-gl_icos-1"></i><span>Бас-гитары</span></a></li>
+                <li><a href="#"><i class="icon icon-gl_icos-44"></i><span>Укулеле</span></a></li>
+                <li><a href="#"><i class="icon icon-gl_icos-8"></i><span>Бренды</span></a></li>
+                <li><a href="#"><i class="icon icon-gl_icos-46"></i><span>АКСЕССУАРЫ</span></a></li>
+              </ul>
+            </div>
+            <!-- sidenav-menu-->
+          </div>
+        </div>
+      </div><br>
+      <h2 class="side-header">Слайдер</h2><br>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- ! Module: Slider-->
+          <div id="home-slider" class="owl-GitarLand-slider owl-carousel dark-bg">
+            <div class="item">
+              <div class="slide-bg preview-4 screen-sm-image-2"><img src="image/export/slide1-lg.png" alt=""></div>
+              <div class="slide-content">
+                <div class="slide-title">Минимальный заказ - от 6 гитар</div>
+              </div><a href="#" class="slide-button">
+                <div class="btn btn-brand-gradient">
+                  <div class="label">Подробнее</div>
+                </div></a>
+            </div>
+            <div class="item">
+              <div class="slide-bg preview-4 screen-sm-image-2">
+                <div class="sprite sprite-logo-footer-xs"></div>
+              </div>
+              <div class="slide-new"> 
+                <div>НОВАЯ КОЛЛЕЦИЯ</div>
+              </div>
+              <div class="slide-content">
+                <div class="slide-title">Спрайт на фоне</div>
+                <div class="slide-article">
+                  <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Правилами по всей коварных заманивший пояс свою толку, возвращайся речью, маленькая текста! Они на берегу пустился назад свою однажды великий составитель выйти!</p>
+                </div>
+              </div><a href="#" class="slide-button">
+                <div class="btn"><i class="icon icon-gl_icos-37"></i>
+                  <div class="label">Подробнее</div>
+                </div></a>
+            </div>
+            <div class="item">
+              <div style="background-image: url(image/export/slide1-lg.png)" class="slide-bg preview-4 screen-sm-image-2"></div>
+              <div class="slide-new"><span class="icon icon-gl_icos-41"> </span><span>Фон задан как<code>background-image</code></span></div>
+            </div>
+            <div class="item">
+              <div class="slide-bg preview-4 screen-sm-image-2"><span class="icon icon-gl_icos-46"></span></div>
+              <div class="slide-new"><span class="icon icon-gl_icos-41"></span><span>Да хоть иконку на фон ставь  <code>span.icon.icon-gl_icos-41</code></span></div>
+            </div>
+          </div>
+          <!-- owl-GitarLand-slider-->
+        </div>
+      </div><br>
+      <h1 class="side-header">.side-header</h1>
+      <div class="container">
+        <div class="row">
+          <h3><code>.side-box</code></h3>
+          <div class="side-box">
+            <P>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ее последний заглавных страна агенство. Заголовок курсивных безорфографичный, одна переписали взобравшись запятой! Собрал имени рукописи встретил, диких первую сбить путь.</P>
+          </div>
+        </div><br>
+        <div class="row">
+          <h2 class="side-header">.side-header + .side-box</h2>
+          <div class="side-box">
+            <P>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ее последний заглавных страна агенство. Заголовок курсивных безорфографичный, одна переписали взобравшись запятой! Собрал имени рукописи встретил, диких первую сбить путь.</P>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="row">
+          <article class="text"></article>
+          <h1>Заголовок 1</h1>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Букв, эта ipsum. Города которой деревни, маленький собрал последний выйти безорфографичный они языком раз заглавных, коварных, толку взобравшись лучше запятых.</p>
+          <h2>Заголовок 2</h2>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Ручеек несколько своих свое, дорогу переписывается наш путь заманивший меня буквенных свою использовало города свой, скатился лучше. Гор, однажды, жаренные!</p>
+          <h3>Заголовок 3</h3>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предложения толку прямо щеке рот океана не рыбными lorem решила назад однажды жаренные, живет страну сих лучше. Переулка, составитель, рекламных.</p>
+          <h4>Заголовок 4</h4>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Языком всеми мир заманивший дорогу до строчка запятых? Агенство рукопись своих однажды. Океана если то запятых пунктуация маленький до речью.</p>
+          <h5>Заголовок 5</h5>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Повстречался всемогущая грустный семантика даль текстами оксмокс ведущими lorem, имеет языком она, страну, речью вопрос бросил. Взобравшись журчит, точках грустный.</p>
+          <h6>Заголовок 6</h6>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Злых, языком свое рыбными силуэт прямо проектах заголовок, она безопасную предупреждал буквенных там. Дорогу путь ipsum, своего несколько, однажды свой.</p>
+          <h4 class="side-lined">Заголовкок  <small><code>.side-lined</code></small></h4>
+          <h4 class="page-header">Заголовкок  <small><code>.page-header</code></small></h4>
+          <p class="lead">Выделенный абзац <code>.lead</code></p>
+          <h2 class="side-lined">Параграфы</h2>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Всемогущая правилами грустный на берегу осталось семь, текстов встретил они пустился буквенных, подзаголовок раз вершину свое свой речью выйти сбить там!</p>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. На берегу решила родного приставка языком, взгляд своих, щеке продолжил. Парадигматическая выйти журчит напоивший текст эта, ее текстами знаках вопроса, вдали.</p>
+          <p> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Использовало ручеек великий выйти образ своего она предупредила живет, жизни речью, рыбного семь залетают за знаках журчит lorem себя силуэт.</p>
+          <h2 class="side-lined">Списки</h2><code>ul>li</code>
+          <ul>
+            <li>Маркер 1</li>
+            <li>Маркер 2
+              <ul>
+                <li>Маркер 1</li>
+                <li>Маркер 2</li>
+                <li>Маркер 3
+                  <ul>
+                    <li>Маркер 1</li>
+                    <li>Маркер 2</li>
+                    <li>Маркер 3</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul><code>ol>li</code>
+          <ol>
+            <li>Номер 1</li>
+            <li>Номер 2</li>
+            <li>Номер 3</li>
+          </ol><code>ul.list-unstyled</code>
+          <ul class="list-unstyled">
+            <li>Маркер 1</li>
+            <li>Маркер 2</li>
+          </ul><code>ul.list-inline</code>
+          <ul class="list-inline">
+            <li>Маркер 1</li>
+            <li>Маркер 2</li>
+          </ul><code>dl>dt+dd</code>
+          <dl>
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+          </dl><code>dl.dl-horizontal>dt+dd</code>
+          <dl class="dl-horizontal">
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+          </dl>
+          <h2 class="side-lined">Код</h2>
+          <p><code>monospace - code</code><br>
+            <tt>monospace - tt</tt><br><kbd>monospace - kbd</kbd><br><kbd><kbd>kbd внутри kbd</kbd></kbd><br><samp>monospace - samp</samp><br>
+          </p>
+          <h5>Преформированный - <code>pre</code></h5>
+          <pre>Текст
+  как
+    есть
+      с учетом табуляци и пробелов</pre>
+          <h5>Преформированный со скроллом - <code>pre.pre-scrollable</code></h5>
+          <pre class="pre-scrollable">Строка 1 
+Строка 2 
+Строка 3 
+Строка 4 
+Строка 5 
+Строка 6 
+Строка 7 
+Строка 8 
+Строка 9 
+Строка 10
+Строка 11
+Строка 12
+Строка 13
+Строка 14
+Строка 15
+Строка 16
+Строка 17
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur doloribus optio quos dolorum quam totam delectus veritatis, eum quas, ex dolores consequatur excepturi. Maxime error distinctio optio necessitatibus nisi!
+
+</pre>
+          <h2 class="side-lined">Выделение</h2><a href="#">Ссылка - </a><code>a</code><br><strong>Выделеный текст - </strong><code>strong</code><br><b>Жирный шрифт - </b><code>b</code><br><em>Курсив - </em><code>em</code><br>
+          <u>Подчеркнутый - </u><code>u</code><br><ins>Подчеркнутый - </ins><code>ins</code><br>
+          <s>Зачеркнуты й - </s><code>s</code><br>
+          <del>Зачеркнуты й - </del><code>del</code><br>
+          <big>Увеличеный - </big><code>big</code><br><small>Уменьшенный - </small><code>small</code><br>
+          <p><sup>sup</sup>Надстрочный\Подстрочный<sub>sub</sub></p>
+          <hr>
+          <div class="box"><code>.box</code></div>
+          <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.<code>.muted</code></p>
+          <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.<code>.text-warning</code></p>
+          <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.<code>.text-error</code></p>
+          <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.<code>.text-info</code></p>
+          <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.<code>.text-success</code></p>
+          <hr>
+          <p class="box bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.  <code>.bg-primary</code></p>
+          <p class="box bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.  <code>.bg-success</code></p>
+          <p class="box bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.  <code>.bg-info</code></p>
+          <p class="box bg-warning">Etiam porta sem malesuada magna mollis euismod.  <code>.bg-warning</code></p>
+          <p class="box bg-danger">Donec ullamcorper nulla non metus auctor fringilla.  <code>.bg-danger</code></p>
+          <hr>
+          <h2 class="side-lined">Выравнивание</h2>
+          <h4> <code>.text-left</code></h4>
+          <p class="text-left"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Великий переулка города единственное большого однажды даже ручеек, текст первую букв текста возвращайся большой переписали маленькая семь пор о речью.</p>
+          <h4> <code>.text-right</code></h4>
+          <p class="text-right"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Запятых пояс, подзаголовок рекламных коварный реторический которое снова но необходимыми великий, жизни вопрос переписали строчка алфавит, сбить рыбного пустился рыбными.</p>
+          <h4> <code>.text-center</code></h4>
+          <p class="text-center"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Имеет снова, диких если лучше что своего заглавных залетают свой безорфографичный послушавшись последний деревни ее подзаголовок о имени, обеспечивает родного!</p>
+          <h4> <code>.text-justify</code></h4>
+          <p class="text-justify"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Коварных путь рукопись они меня языком ее ipsum города назад рыбного, жизни которое себя инициал, знаках взгляд дороге однажды которой?</p>
+          <h4> <code>.text-nowrap</code></h4>
+          <p style="border: 1px solid #000;width: 200px;padding: 20px;" class="text-nowrap">Текст который не переносится на новую строку</p>
+          <h4> <code>.text-muted</code></h4>
+          <p class="text-muted"> Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Предупредила толку однажды свою подпоясал, он скатился силуэт текст рукопись, знаках рыбного коварный точках, на берегу всеми безопасную о путь лучше.</p>
+          <blockquote>Цитата - <code>blockquote</code>
+            <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Использовало ручеек великий выйти образ своего она предупредила живет, жизни речью, рыбного семь залетают за знаках журчит lorem себя силуэт.</p>
+          </blockquote>
+          <h3 class="side-lined">Таблицы</h3>
+          <div>
+            <div>
+              <h4>
+                 
+                Класс <code>.table </code><br><small><code>table.table>(thead>tr>th)+(tbody>tr>td)</code></small>
+              </h4>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Пользователь</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <hr>
+              <h4>Класс <code>.table-bordered</code><br><small><code>table.table.table-bordered>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Пользователь</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <hr>
+              <h4>Класс <code>.table-striped </code><br><small><code>table.table.table-striped>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Пользователь</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <hr>
+              <h4>Класс <code>.table-hover </code><br><small><code>table.table.table-hover>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Имя</th>
+                    <th>Фамилия</th>
+                    <th>Пользователь</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <hr>
+              <h4>Адаптивные таблицы <code>.table-responsive</code><br><small><code>.table-responsive>table.table>(thead>tr>th)+(tbody>tr>td)</code></small></h4>
+              <div class="bs-example">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Заголовок таблицы</th>
+                        <th>Заголовок таблицы</th>
+                        <th>Заголовок таблицы</th>
+                        <th>Заголовок таблицы</th>
+                        <th>Заголовок таблицы</th>
+                        <th>Заголовок таблицы</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                        <td>Ячейка</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <h3 class="side-lined">Зображения</h3>
+          </div>
+          <div class="inline-block">
+            <h5> <code>img</code></h5><img src="http://placehold.it/150x150">
+          </div>
+          <div class="inline-block">
+            <h5> <code>.img-rounded</code></h5><img src="http://placehold.it/150x150" class="img-rounded">
+          </div>
+          <div class="inline-block">
+            <h5> <code>.img-thumbnail</code></h5><img src="http://placehold.it/150x150" class="img-thumbnail">
+          </div>
+          <div class="inline-block">
+            <h5> <code>.img-circle</code></h5><img src="http://placehold.it/150x150" class="img-circle">
+          </div>
+          <div class="inline-block">
+            <h5> <code>.img-responsive</code></h5><img src="http://placehold.it/150x150" class="img-responsive">
+          </div>
+          <h3 class="side-lined">Значки</h3>
+          <h5>Значек закрытия - <code>button.close</code></h5>
+          <div class="clearfix"></div>
+          <button type="button" aria-hidden="true" class="close pull-left">&times;</button>
+          <div class="clearfix"></div>
+          <h5>Значек меню - <code>span.caret</code></h5>
+          <div class="clearfix"></div><span class="caret"></span>
+          <h3 class="side-lined">Формы</h3>
+          <form role="form" class="form-horizontal">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input id="inputEmail3" type="email" placeholder="Email" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">&Pcy;&acy;&rcy;&ocy;&lcy;&softcy;</label>
+              <div class="col-sm-10">
+                <input id="inputPassword3" type="password" placeholder="Password" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Запомнить меня
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Войти</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <textarea rows="3" class="form-control"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- PageContent-->
+    <!-- ! Common: Footer-->
+    <footer class="common-footer"> 
+      <div class="top-footer brand-bg container-fluid">
+        <div class="row">
+          <div class="container"> 
+            <div class="col-xs-12 col-md-4">
+              <div class="row">
+                <div class="footer-logo col-xs-12 col-sm-5 col-md-12">
+                  <div class="row">
+                    <p class="sprite sprite-logo-footer-xs"></p>
+                  </div>
+                </div>
+                <!-- footer-logo-->
+                <div class="copyright col-xs-12 col-sm-7 col-md-12">
+                  <div class="row">
+                    <p>Copyright Название  ©  2016</p>
+                    <p>Воспроизводимые на данном сайте торговые марки используются держателями сайта с разрешения правообладателя.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden-xs col-sm-12 col-md-8">
+              <div class="row">
+                <div class="bottom-nav">
+                  <div class="col-sm-4">
+                    <p class="h">О нас</p>
+                    <ul>
+                      <li><a href="#">О компаниии</a></li>
+                      <li><a href="#">Отзывы клиентов</a></li>
+                      <li><a href="#">Статьи</a></li>
+                      <li><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <p class="h">Информация для клиента</p>
+                    <ul>
+                      <li><a href="#">Доставка товара</a></li>
+                      <li><a href="#">Оплата товара</a></li>
+                      <li><a href="#">Вопросы и ответы</a></li>
+                      <li><a href="#">Акции компании</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <p class="h">Помощь по сайту</p>
+                    <ul>
+                      <li><a href="#">Перезвонить вам?</a></li>
+                      <li><a href="#">Задать вопрос</a></li>
+                      <li><a href="#">Регистрация </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- top-footer-->
+      <div class="bottom-footer dark-bg container-fluid">
+        <div class="row">
+          <div class="container">
+            <div class="address col-xs-12 col-sm-3"> 
+              <p class="h">Адрес:</p>
+              <p>г. Ваш город, ул. Ваша улица номер, 5</p>
+            </div>
+            <div class="contacts col-xs-12 col-sm-3"> 
+              <p class="h">Адрес:</p>
+              <p>г. Ваш город, ул. Ваша улица номер, 5</p>
+            </div>
+            <div class="mail col-xs-12 col-sm-3"> 
+              <p class="h">Наша почта:</p>
+              <p>Support@gmail.com</p>
+            </div>
+            <div class="social col-xs-12 col-sm-3"> 
+              <p class="h">Мы в социальных сетях:</p>
+              <p class="soc-contaner"><a href="#" class="soc tw icon icon-gl_icos-4"></a><a href="#" class="soc fb icon icon-gl_icos-5"></a><a href="#" class="soc ok icon icon-gl_icos-3"></a><a href="#" class="soc vk icon icon-gl_icos-6"></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bottom-footer-->
+    </footer>
+    <!-- common-footer-->
+    <!-- ! * Popups * -->
+    <div id="overlay-element" onclick="closeNav()"></div>
+    <div id="sidenav">
+      <div class="sidenav-container">
+        <botton href="javascript:void(0)" onclick="closeNav()" class="btn closebtn"><i class="icon icon-gl_icos-23"></i>
+          <div class="label"><span>Закрыть меню</span></div>
+        </botton>
+        <!-- ! Module: Side Menu-->
+        <div class="sidenav-menu">
+          <ul>
+            <li class="sub"><a href="#"><i class="icon icon-gl_icos-2"></i><span>АКУСТИЧЕСКИЕ ГИТАРЫ</span></a>
+              <ul>
+                <li class="back"><a href="#"><i class="icon icon-gl_icos-17"></i><span>АКУСТИЧЕСКИЕ ГИТАРЫ</span></a></li>
+                <li><a href="#">Гитарные усилители</a></li>
+                <li><a href="#">Гитары 12-струнные</a></li>
+                <li><a href="#">Гитары акустические</a></li>
+                <li><a href="#">Гитары детские (уменьшенные)</a></li>
+                <li><a href="#">Гитары классические</a></li>
+                <li><a href="#">Гитары электроакустические</a></li>
+                <li><a href="#">Смотреть все </a></li>
+              </ul>
+            </li>
+            <li class="sub"><a href="#"><i class="icon icon-gl_icos-43"></i><span>КЛАССИЧЕСКИЕ ГИТАРЫ</span></a>
+              <ul>
+                <li class="back"><a href="#"><i class="icon icon-gl_icos-17"></i><span>АКУСТИЧЕСКИЕ ГИТАРЫ</span></a></li>
+                <li><a href="#">Гитарные усилители</a></li>
+              </ul>
+            </li>
+            <li><a href=""><i class="icon icon-gl_icos-45"></i><span>ЭЛЕКТРОГИТАРЫ</span></a></li>
+            <li><a href=""><i class="icon icon-gl_icos-1"></i><span>Бас-гитары</span></a></li>
+            <li><a href="#"><i class="icon icon-gl_icos-44"></i><span>Укулеле</span></a></li>
+            <li><a href="#"><i class="icon icon-gl_icos-8"></i><span>Бренды</span></a></li>
+            <li><a href="#"><i class="icon icon-gl_icos-46"></i><span>АКСЕССУАРЫ</span></a></li>
+          </ul>
+        </div>
+        <!-- sidenav-menu-->
+      </div>
+    </div>
+    <!-- #sidenav-->
+    <!-- ! * Scripts * -->
+    <script src="catalog/view/theme/GitarLand/assets/js/scripts-dist.js"></script>
+    <!-- * ! scripts-dist.js include:
+    *      ./jquery-3.1.0.js
+    *      ../lib/OwlCarousel-SASS/owl.carousel.js
+    *      ./user.js
+    *      ./action.js
+    -->
+    <script type="text/javascript">
+      // * Side Nav *
+      function openNav() {
+          document.getElementById("overlay-element").style.display = "block";
+          document.getElementById("sidenav").style.right= "0";
+      }
+      
+      function closeNav() {
+          document.getElementById("overlay-element").style.display = "none";
+          document.getElementById("sidenav").style.right = "-250px";
+      }
+    </script>
+    <script type="text/javascript">
+      // * Sidenav Menu *
+      $(document).ready(function() {
+        $('.sidenav-menu .sub>a').click(function(event) {
+          $('.sidenav-menu>ul').css({
+            marginLeft: '-100%'
+          });
+          $(this).addClass('open');
+          return false;
+        });
+      
+        $('.sidenav-menu .back>a').click(function() {
+          $('.sidenav-menu>ul').css({
+            marginLeft: '0'
+          });
+          $('.sidenav-menu .sub>a.open').removeClass('open');
+          return false;
+        });
+      });
+      
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#home-slider").owlCarousel({
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true,
+            //- autoPlay : 5000,
+            navigationText:  ["",""]
+        });
+        $("#review-slider").owlCarousel({
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true,
+            //- autoPlay : 5000,
+            navigationText:  ["",""]
+        });
+        $("#review-carusel").owlCarousel({
+            theme : "review-carusel-theme",
+            navigation : true, // Show next and prev buttons
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem:true,
+            //- autoPlay : 5000,
+            navigationText:  ["",""]
+        });
+      });
+    </script>
+    <!-- End body-->
+  </body>
+</html>
