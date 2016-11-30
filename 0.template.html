@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="theme-color" content="#ce4827">
-    <link rel="stylesheet" href="catalog/view/theme/GitarLand/assets/css/style-dist.css">
+    <link rel="stylesheet" href="catalog/view/theme/GitarLand/assets/css/style.css">
+    <script>var readyjs = [];</script>
   </head>
   <body>
     <!-- ! Common: Header-->
@@ -27,7 +28,7 @@
         </div>
       </div>
       <!-- top-header-bg-->
-      <div class="container">
+      <div class="container header-body">
         <div class="top-nav hidden-xs col-sm-9">
           <div class="row">
             <ul>
@@ -43,7 +44,7 @@
         <!-- top-nav-->
         <div class="row">
           <div class="top-search hidden-xs col-sm-3">
-            <div class="row">
+            <div class="mod_search">
               <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
                 <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
               </form>
@@ -96,7 +97,7 @@
                       </div>
                       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
                         <div class="row">
-                          <botton class="btn btn-call btn-bright-color">
+                          <botton data-toggle="modal" data-target="#back-call" class="btn btn-call btn-bright-color">
                             <div class="label">Обратный звонок</div>
                           </botton>
                         </div>
@@ -186,7 +187,459 @@
     </div>
     <!-- common-categories-->
     <section id="PageContent">
-      <h2 class="side-header">Вертикальная сетка для иконок и изображений</h2>
+      <h3 class="side-header">Модальные окна</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mod_search">
+              <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
+                <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <botton onclick="openNav()" class="btn">Меню</botton><code>onclick='openNav()'</code>
+          <button data-toggle="modal" data-target="#back-call" class="btn">Обратный звонок</button><code>data-toggle='modal', data-target='#back-call'</code>
+          <button data-toggle="modal" data-target="#buy-single-click" class="btn">Купить в один клик</button><code>data-toggle='modal', data-target='#buy-single-click'</code>
+          <button data-toggle="modal" data-target="#added-to-cart" class="btn">Товар добавлен в корзину.</button><code>data-toggle='modal' data-target='#added-to-cart'</code>
+        </div>
+        <div class="row">
+          <h4 class="side-header">Colorbox Demonstration
+            <h5>Elastic Transition</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group1">Grouped Photo 1</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group1">Grouped Photo 2</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group1">Grouped Photo 3</a></p>
+            <h5>Fade Transition</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee" class="group2">Grouped Photo 1</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group2">Grouped Photo 2</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group2">Grouped Photo 3</a></p>
+            <h5>No Transition + fixed width and height (75% of screen size)</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group3">Grouped Photo 1</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group3">Grouped Photo 2</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group3">Grouped Photo 3</a></p>
+            <h5>Slideshow</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee1.jpg" title="Me and my grandfather on the Ohoopee." class="group4">Grouped Photo 1</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee2.jpg" title="On the Ohoopee as a child" class="group4">Grouped Photo 2</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ohoopee3.jpg" title="On the Ohoopee as an adult" class="group4">Grouped Photo 3</a></p>
+            <h5>Other Content Types</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/ajax.html" title="Homer Defined" class="ajax">Outside HTML (Ajax)</a></p>
+            <p><a href="http://www.youtube.com/embed/VOJyrQa_WR4?rel=0&amp;wmode=transparent" class="youtube">Flash / Video (Iframe/Direct Link To YouTube)</a></p>
+            <p><a href="http://player.vimeo.com/video/2285902" title="Röyksopp: Remind Me" class="vimeo">Flash / Video (Iframe/Direct Link To Vimeo)</a></p>
+            <p><a href="http://wikipedia.com" class="iframe">Outside Webpage (Iframe)</a></p>
+            <p><a href="#inline_content" class="inline">Inline HTML</a></p>
+            <h5>Demonstration of using callbacks</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/marylou.jpg" title="Marylou on Cumberland Island" class="callbacks">Example with alerts</a>. Callbacks and event-hooks allow users to extend functionality without having to rewrite parts of the plugin.</p>
+            <h5>Retina Images</h5>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/daisy.jpg" title="Retina" class="retina">Retina</a></p>
+            <p><a href="http://www.jacklmoore.com/colorbox/content/daisy.jpg" title="Non-Retina" class="non-retina">Non-Retina</a></p>
+            <!-- This contains the hidden content for inline calls-->
+            <div style="display:none">
+              <div id="inline_content" style="padding:10px; background:#fff;">
+                <p><strong>This content comes from a hidden element on this page.</strong></p>
+                <p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+                <p><a id="click" href="#" style="padding:5px; background:#ccc;">Click me, it will be preserved!</a></p>
+                <p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
+                <p>Updating Content Example:<br><a href="http://www.jacklmoore.com/colorbox/content/ajax.html" class="ajax">Click here to load new content</a></p>
+              </div>
+            </div>
+          </h4>
+        </div>
+      </div>
+      <h3 class="side-header">Примеры для плагина jQuery Form Styler</h3>
+      <div class="container">
+        <div class="row">
+          <h4 class="side-header">Чекбоксы</h4>
+          <div class="side-box">
+            <input type="checkbox" class="styler"> без тега <code>label</code><br><span id="r">
+              <input id="checkbox1" type="checkbox" class="styler"></span>
+            <label for="checkbox1">в тег <code>label</code> помещен только текст</label><br>
+            <label>
+              <input type="checkbox" class="styler"> и текст, и <code>input.styler</code> помещены в тег <code>label</code>
+            </label><br>
+            <label>
+              <input type="checkbox" disabled="" checked="" class="styler"> неактивный чекбокс
+            </label>
+          </div>
+          <h4 class="side-header">Радиокнопки</h4>
+          <div class="side-box">
+            <input type="radio" name="radio" class="styler"> без тега <code>label</code><br>
+            <input id="radio1" type="radio" name="radio" class="styler">
+            <label for="radio1">в тег <code>label</code> помещен только текст</label><br>
+            <label>
+              <input type="radio" name="radio" class="styler"> и текст, и <code>input.styler</code> помещены в тег <code>label</code>
+            </label><br>
+            <label>
+              <input type="radio" name="radio" disabled="" class="styler"> неактивная радиокнопка
+            </label>
+          </div>
+          <h4 class="side-header">Поле для выбора файла</h4>
+          <div class="side-box">
+            <input type="file" class="styler">
+          </div>
+          <h4 class="side-header">Поле для ввода чисел</h4>
+          <div class="side-box">
+            <p>Поле без атрибутов.</p>
+            <input type="number" class="styler">
+          </div>
+          <div class="side-box">
+            <p>Поле с атрибутами <code>min="0" max="100" step="5"</code>.</p>
+            <input type="number" min="0" max="100" step="5" class="styler">
+          </div>
+          <div class="side-box number-plus-minus">
+            <p>Другой вид переключателей.</p>
+            <input type="number" class="styler">
+          </div>
+          <h4 class="side-header">Одиночные селекты</h4>
+          <p style="color: #43C617">По умолчанию ширина селекта на этой странице установлена 250 пикселей.</p>
+          <div class="side-box">
+            <p><strong>Простой селект</strong> с несколькими пунктами, <br>один из них неактивный.</p>
+            <select class="styler">
+              <option>-- Выберите --</option>
+              <option>Пункт 1</option>
+              <option>Пункт 2</option>
+              <option disabled="">Пункт 3</option>
+              <option>Пункт 4</option>
+              <option>Пункт 5</option>
+            </select>
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <p>Селект <strong>без заданной ширины</strong>, имеющий пункт <strong>с длинным текстом</strong>.</p>
+            <select class="styler width-auto">
+              <option>-- Выберите --</option>
+              <option>Пункт 1</option>
+              <option>Пункт 2</option>
+              <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+              <option>Пункт 4</option>
+              <option>Пункт 5</option>
+            </select><br><br>
+            <p>Селект <strong>с шириной 200 пикселей</strong>, имеющий пункт <strong>с длинным текстом</strong>.</p>
+            <select class="styler width-200">
+              <option>-- Выберите --</option>
+              <option>Пункт 1</option>
+              <option>Пункт 2</option>
+              <option>Какой-то пункт с очень-очень-очень длинным-длинным-длинным текстом</option>
+              <option>Пункт 4</option>
+              <option>Пункт 5</option>
+            </select>
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <div class="sec maxheight">
+              <p>Выпадающий список этого селекта <br><strong>органичен по высоте</strong>.</p>
+              <select class="styler">
+                <option>-- Выберите --</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 4</option>
+                <option>Пункт 5</option>
+                <option>Пункт 6</option>
+                <option>Пункт 7</option>
+                <option>Пункт 8</option>
+                <option>Пункт 9</option>
+                <option>Пункт 10</option>
+                <option>Пункт 11</option>
+                <option>Пункт 12</option>
+                <option>Пункт 13</option>
+                <option>Пункт 14</option>
+                <option>Пункт 15</option>
+                <option>Пункт 16</option>
+                <option>Пункт 17</option>
+                <option>Пункт 18</option>
+                <option>Пункт 19</option>
+                <option>Пункт 20</option>
+                <option>Пункт 21</option>
+                <option>Пункт 22</option>
+                <option>Пункт 23</option>
+                <option>Пункт 24</option>
+                <option>Пункт 25</option>
+                <option>Пункт 26</option>
+                <option>Пункт 27</option>
+                <option>Пункт 28</option>
+                <option>Пункт 29</option>
+                <option>Пункт 30</option>
+              </select>
+            </div>
+            <!-- .sec-->
+            <div class="sec">
+              <p>Селект <strong>с длинным списком</strong>, не ограниченным максимальной высотой.</p>
+              <select class="styler">
+                <option>-- Выберите --</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 4</option>
+                <option>Пункт 5</option>
+                <option>Пункт 6</option>
+                <option>Пункт 7</option>
+                <option>Пункт 8</option>
+                <option>Пункт 9</option>
+                <option>Пункт 10</option>
+                <option>Пункт 11</option>
+                <option>Пункт 12</option>
+                <option>Пункт 13</option>
+                <option>Пункт 14</option>
+                <option>Пункт 15</option>
+                <option>Пункт 16</option>
+                <option>Пункт 17</option>
+                <option>Пункт 18</option>
+                <option>Пункт 19</option>
+                <option>Пункт 20</option>
+                <option>Пункт 21</option>
+                <option>Пункт 22</option>
+                <option>Пункт 23</option>
+                <option>Пункт 24</option>
+                <option>Пункт 25</option>
+                <option>Пункт 26</option>
+                <option>Пункт 27</option>
+                <option>Пункт 28</option>
+                <option>Пункт 29</option>
+                <option>Пункт 30</option>
+                <option>Пункт 31</option>
+                <option>Пункт 32</option>
+                <option>Пункт 33</option>
+                <option>Пункт 34</option>
+                <option>Пункт 35</option>
+                <option>Пункт 36</option>
+                <option>Пункт 37</option>
+                <option>Пункт 38</option>
+                <option>Пункт 39</option>
+                <option>Пункт 40</option>
+                <option>Пункт 41</option>
+                <option>Пункт 42</option>
+                <option>Пункт 43</option>
+                <option>Пункт 44</option>
+                <option>Пункт 45</option>
+                <option>Пункт 46</option>
+                <option>Пункт 47</option>
+                <option>Пункт 48</option>
+                <option>Пункт 49</option>
+                <option>Пункт 50</option>
+                <option>Пункт 51</option>
+                <option>Пункт 52</option>
+                <option>Пункт 53</option>
+                <option>Пункт 54</option>
+                <option>Пункт 55</option>
+                <option>Пункт 56</option>
+                <option>Пункт 57</option>
+                <option>Пункт 58</option>
+                <option>Пункт 59</option>
+                <option>Пункт 60</option>
+                <option>Пункт 61</option>
+                <option>Пункт 62</option>
+                <option>Пункт 63</option>
+                <option>Пункт 64</option>
+                <option>Пункт 65</option>
+                <option>Пункт 66</option>
+                <option>Пункт 67</option>
+                <option>Пункт 68</option>
+                <option>Пункт 69</option>
+                <option>Пункт 70</option>
+                <option>Пункт 71</option>
+                <option>Пункт 72</option>
+                <option>Пункт 73</option>
+                <option>Пункт 74</option>
+                <option>Пункт 75</option>
+                <option>Пункт 76</option>
+                <option>Пункт 77</option>
+                <option>Пункт 78</option>
+                <option>Пункт 79</option>
+                <option>Пункт 80</option>
+                <option>Пункт 81</option>
+                <option>Пункт 82</option>
+                <option>Пункт 83</option>
+                <option>Пункт 84</option>
+                <option>Пункт 85</option>
+                <option>Пункт 86</option>
+                <option>Пункт 87</option>
+                <option>Пункт 88</option>
+                <option>Пункт 89</option>
+                <option>Пункт 90</option>
+                <option>Пункт 91</option>
+                <option>Пункт 92</option>
+                <option>Пункт 93</option>
+                <option>Пункт 94</option>
+                <option>Пункт 95</option>
+                <option>Пункт 96</option>
+                <option>Пункт 97</option>
+                <option>Пункт 98</option>
+                <option>Пункт 99</option>
+                <option>Пункт 100</option>
+              </select>
+            </div>
+            <!-- .sec-->
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <div class="sec">
+              <p>Проверяем, правильное ли значение передается при изменении. У оригинального селекта прописано: <code>onchange="alert(this.value)"</code>.</p>
+              <select onchange="alert(this.value)" class="styler">
+                <option>-- Выберите --</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 4</option>
+                <option>Пункт 5</option>
+              </select>
+            </div>
+            <!-- .sec-->
+            <div class="sec">
+              <p>Селект <strong>с замещающим текстом</strong> (placeholder). Текст "-- Выберите --" задан не через тег <code>option</code>, а через атрибут <code>data-placeholder</code>.</p>
+              <select data-placeholder="-- Выберите --" class="styler">
+                <option></option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 4</option>
+                <option>Пункт 5</option>
+              </select>
+            </div>
+            <!-- .sec-->
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <div class="sec">
+              <p>Селект <strong>с группировкой пунктов</strong><br>(используется тег <code>optgroup</code>), один из них неактивный.</p>
+              <select class="styler">
+                <option>-- Выберите --</option>
+                <optgroup label="Группа 1">
+                  <option>Пункт 1.1</option>
+                  <option>Пункт 1.2</option>
+                  <option>Пункт 1.3</option>
+                </optgroup>
+                <optgroup label="Группа 2">
+                  <option>Пункт 2.1</option>
+                  <option disabled="">Пункт 2.2</option>
+                  <option>Пункт 2.3</option>
+                </optgroup>
+              </select>
+            </div>
+            <!-- .sec-->
+            <div class="sec">
+              <p>Селект с выделением групп <strong>разными цветами</strong> (указаны классы <code>.color1</code> и <code>.color2</code> для <code>optgroup</code>).</p>
+              <select class="styler">
+                <option>-- Выберите --</option>
+                <optgroup label="Группа 1" class="color1">
+                  <option>Пункт 1.1</option>
+                  <option>Пункт 1.2</option>
+                  <option>Пункт 1.3</option>
+                </optgroup>
+                <optgroup label="Группа 2" class="color2">
+                  <option>Пункт 2.1</option>
+                  <option>Пункт 2.2</option>
+                  <option>Пункт 2.3</option>
+                </optgroup>
+              </select>
+            </div>
+            <!-- .sec-->
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <div class="sec showChanged">
+              <p>Показываем, что селект изменен, используя класс <code>.changed</code> (появляется зеленая обводка).</p>
+              <select class="styler">
+                <option>-- Выберите --</option>
+                <option>Пункт 1</option>
+                <option>Пункт 2</option>
+                <option>Пункт 3</option>
+                <option>Пункт 4</option>
+                <option>Пункт 5</option>
+              </select>
+            </div>
+            <!-- .sec-->
+            <div class="sec lang">
+              <p>Класс, указаннный для <code>option</code>, передается свернутом селекту, благодаря чему мы в нем видим флаг.</p>
+              <select class="styler">
+                <option>-- Выберите язык --</option>
+                <option class="lang-en">Английский</option>
+                <option class="lang-es">Испанский</option>
+                <option class="lang-de">Немецкий</option>
+                <option class="lang-ru">Русский</option>
+                <option class="lang-fr">Французский</option>
+              </select>
+            </div>
+            <!-- .sec-->
+          </div>
+          <!-- .side-box-->
+          <h4 class="side-header">Мультиселекты</h4>
+          <div class="side-box">
+            <p><strong>Мультиселект</strong>, один из пунктов неактивный, <br>параметр <code>size</code> не указан.</p>
+            <select multiple="" class="styler">
+              <option>-- Выберите --</option>
+              <option>Пункт 1</option>
+              <option>Пункт 2</option>
+              <option disabled="">Пункт 3</option>
+              <option>Пункт 4</option>
+              <option>Пункт 5</option>
+            </select>
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <p>Мультиселект <strong>с параметром</strong><code>size</code><strong>равным</strong><code>6</code> и <strong>с заданной шириной</strong> (400 пикселей).</p>
+            <select multiple="" size="6" class="styler width-400">
+              <option>-- Выберите один или несколько пунктов --</option>
+              <option>Пункт 1</option>
+              <option>Пункт 2</option>
+              <option>Пункт 3</option>
+              <option>Пункт 4</option>
+              <option>Пункт 5</option>
+            </select>
+          </div>
+          <!-- .side-box-->
+          <div class="side-box">
+            <div class="sec">
+              <p>Мультиселект <strong>с группировкой пунктов</strong> (используется тег <code>optgroup</code>), один из них неактивный.</p>
+              <select multiple="" size="9" class="styler">
+                <option>-- Выберите --</option>
+                <optgroup label="Группа 1">
+                  <option>Пункт 1.1</option>
+                  <option>Пункт 1.2</option>
+                  <option>Пункт 1.3</option>
+                </optgroup>
+                <optgroup label="Группа 2">
+                  <option>Пункт 2.1</option>
+                  <option disabled="">Пункт 2.2</option>
+                  <option>Пункт 2.3</option>
+                </optgroup>
+              </select>
+            </div>
+            <!-- .sec-->
+            <div class="sec">
+              <p>Мультиселект с выделением групп <strong>разными цветами</strong> (указаны классы <code>.color1</code> и <code>.color2</code> для <code>optgroup</code>).</p>
+              <select multiple="" size="9" class="styler">
+                <option>-- Выберите --</option>
+                <optgroup label="Группа 1" class="color1">
+                  <option>Пункт 1.1</option>
+                  <option>Пункт 1.2</option>
+                  <option>Пункт 1.3</option>
+                </optgroup>
+                <optgroup label="Группа 2" class="color2">
+                  <option>Пункт 2.1</option>
+                  <option>Пункт 2.2</option>
+                  <option>Пункт 2.3</option>
+                </optgroup>
+              </select>
+            </div>
+            <!-- .sec-->
+          </div>
+          <!-- .side-box-->
+          <h4 class="side-header">Прочие элементы форм (только CSS)</h4>
+          <div class="side-box css">
+            <p>Стилизация данных элементов <strong>не требует наличия плагина</strong>.</p><br>
+            <input type="text" size="60" placeholder="Однострочное текстовое поле..." class="styler"><code>input.styler(type='text', size='60', placeholder='Однострочное текстовое поле...')</code><br><br>
+            <input type="password" size="60" placeholder="Поле для ввода пароля..." class="styler"><code>input.styler(type='password', size='60', placeholder='Поле для ввода пароля...')</code><br><br>
+            <textarea cols="60" rows="5" placeholder="Многострочное текстовое поле..." class="styler"></textarea><code>textarea.styler(cols='60', rows='5', placeholder='Многострочное текстовое поле...')</code><br><br>
+            <input type="button" value="Кнопка" class="styler"><code>input.styler(type='button', value='Кнопка')</code><br><br>
+            <button type="submit" class="styler">Кнопка</button><code>button.styler(type='submit') Кнопка</code><br><br>
+            <input type="reset" value="Сброс" class="styler"><code>input.styler(type='reset', value='Сброс')</code><br><br>
+            <input type="button" value="Кнопка неактивная" disabled="" class="styler"><code>input.styler(type='button', value='Кнопка неактивная', disabled='')</code><br>
+            <button type="submit" disabled="" class="styler">Кнопка неактивная</button><code>button.styler(type='submit', disabled='') Кнопка неактивная</code>
+          </div>
+        </div>
+      </div>
+      <h3 class="side-header">Вертикальная сетка для иконок и изображений</h3>
       <div class="container">
         <div class="row">
           <p> <code>.size +</code> - только размер текста (удобно для шрифтовых иконок) <code>.size.icon-xs.screen-sm-icon-sm</code></p>
@@ -198,66 +651,114 @@
           <div class="col-xs-1">
             <p>16px</p>
             <p><code>.icon-1</code></p>
-            <div class="box height icon-1"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop icon-1">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>24px</p>
             <p><code>.icon-2</code></p>
-            <div class="box height icon-2"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop icon-2">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>32px</p>
             <p><code>.icon-3</code></p>
-            <div class="box height icon-3"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop icon-3">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>48px</p>
             <p><code>.icon-4</code></p>
-            <div class="box height icon-4"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop icon-4">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>64px</p>
             <p><code>.preview-1</code></p>
-            <div class="box height preview-1"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop preview-1">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>96px</p>
             <p><code>.preview-2</code></p>
-            <div class="box height preview-2"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop preview-2">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>128px</p>
             <p><code>.preview-3</code></p>
-            <div class="box height preview-3"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop preview-3">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>192px</p>
             <p><code>.preview-4</code></p>
-            <div class="box height preview-4"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop preview-4">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>256px</p>
             <p><code>.image-1</code></p>
-            <div class="box height image-1"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop image-1">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>384px</p>
             <p><code>.image-2</code></p>
-            <div class="box height image-2"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop image-2">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>512px</p>
             <p><code>.image-3</code></p>
-            <div class="box height image-3"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop image-3">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
           <div class="col-xs-1">
             <p>768px</p>
             <p><code>.image-4</code></p>
-            <div class="box height image-4"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+            <div class="box crop image-4">
+              <div class="outer">
+                <div class="inner"><img src="http://31.media.tumblr.com/8a4fdb3e35c8c0b213726222f541a935/tumblr_mxqdt2d5ef1rpx9iao1_1280.jpg" alt=""></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <h2 class="side-header">Сетка слайдера</h2><br>
+      <h3 class="side-header">Сетка слайдера</h3><br>
       <div class="container">
         <div class="row">
           <div class="test col-xs-12 col-md-8">
@@ -277,7 +778,7 @@
           </div>
         </div>
       </div><br>
-      <h2 class="side-header">Обрезка изображений</h2>
+      <h3 class="side-header">Обрезка изображений</h3>
       <div class="container"><br><br><br>
         <div class="row text-center">
           <div class="col-sm-4">
@@ -303,7 +804,7 @@
           </div>
         </div><br><br><br>
       </div>
-      <h2 class="side-header">Спрайты</h2>
+      <h3 class="side-header">Спрайты</h3>
       <div class="container">
         <div class="row">
           <h4>http://spritegen.website-performance.org/</h4>
@@ -322,7 +823,7 @@
           <p><i class="sprite sprite-logo-xs"></i><code>i.sprite.sprite-logo-xs</code></p>
         </div>
       </div>
-      <h2 class="side-header">Иконки</h2>
+      <h3 class="side-header">Иконки</h3>
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-md-4">
@@ -465,58 +966,58 @@
           </div>
         </div>
       </div>
-      <h2 class="side-header">Кнопки</h2>
+      <h3 class="side-header">Кнопки</h3>
       <div class="container">
         <div class="row">
           <div class="col-sm-6 col-md-4">
             <botton class="btn">
               <div class="label">Кнопка</div>
             </botton>
+            <p><code>botton.btn>.label{Кнопка}</code></p>
           </div>
           <div class="col-sm-6 col-md-4">
             <botton class="btn"><i class="icon icon-gl_icos-41"></i>
               <div class="label">Кнопка <b>с иконкой</b></div>
             </botton>
+            <p><code>botton.btn>i.icon.icon-gl_icos-41>.label{Кнопка}>b{с иконкой}</code></p>
           </div>
           <div class="col-sm-6 col-md-4">
             <botton class="btn btn-external-reset-styles"><i class="icon icon-gl_icos-41"></i>
               <div class="label">Без внешних стилей</div>
             </botton>
+            <p><code>botton.btn.btn-external-reset-styles>i.icon.icon-gl_icos-41+.label{Без внешних стилей}</code></p>
           </div>
           <div class="col-sm-6 col-md-4">
             <botton class="btn btn-bright-color"> 
-              <div class="label">Обратный звонок</div>
+              <div class="label">C брендовым цветом</div>
             </botton>
+            <p><code>botton.btn.btn-bright-color>.label{C брендовым цветом}</code></p>
           </div>
           <div class="col-sm-6 col-md-4">
             <botton class="btn btn-larger-icon"><i class="icon icon-gl_icos-19"><span class="icon icon-gl_icos-37"></span></i>
               <div class="label">Кнопка с увеличенной конкой и чем то еще на ней в <code>span</code></div>
             </botton>
+            <p><code>botton.btn.btn-larger-icon>(i.icon.icon-gl_icos-19>span.icon.icon-gl_icos-37)+.label{Кнопка с увеличенной конкой и чем то еще на ней в span}</code></p>
           </div>
           <div class="col-sm-6 col-md-4">
             <botton class="btn btn-big-icon"><i class="icon icon-gl_icos-19"><span class="icon icon-gl_icos-37"></span></i>
               <div class="label">Кнопка с большой конкой и чем то еще на ней в <code>span</code></div>
             </botton>
+            <p><code>botton.btn.btn-big-icon>(i.icon.icon-gl_icos-19>span.icon.icon-gl_icos-37)+.label{Кнопка с увеличенной конкой и чем то еще на ней в span}</code></p>
             <botton class="btn btn-huge-icon"><i class="icon icon-gl_icos-19"><span class="icon icon-gl_icos-37"></span></i>
               <div class="label">Кнопка с огромной конкой и чем то еще на ней в <code>span</code></div>
             </botton>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <botton onclick="openNav()" class="btn menu-icon"><i class="icon icon-gl_icos-40"></i></botton>
-          </div>
-          <div class="col-sm-6 col-md-4">
-            <botton onclick="openNav()" class="btn"><i class="icon icon-gl_icos-40"></i>
-              <div class="label">Меню</div>
-            </botton>
+            <p><code>botton.btn.btn-huge-icon>(i.icon.icon-gl_icos-19>span.icon.icon-gl_icos-37)+.label{Кнопка с увеличенной конкой и чем то еще на ней в span}</code></p>
           </div>
           <div class="col-sm-6 col-md-4">
             <botton class="btn btn-brand-gradient"><i class="icon icon-gl_icos-37"></i>
               <div class="label">C брендовым градиентом</div>
             </botton>
+            <p><code>botton.btn.btn-brand-gradient>i.icon.icon-gl_icos-37+.label{C брендовым градиентом}</code></p>
           </div>
         </div>
       </div>
-      <h2 class="side-header">Вертикальное меню для мобильной верссии</h2>
+      <h3 class="side-header">Вертикальное меню для мобильной верссии</h3>
       <div class="container">
         <div class="row">
           <h3><code>.sidenav-menu</code></h3>
@@ -554,7 +1055,7 @@
           </div>
         </div>
       </div><br>
-      <h2 class="side-header">Слайдер</h2><br>
+      <h3 class="side-header">Слайдер</h3><br>
       <div class="container-fluid">
         <div class="row">
           <!-- ! Module: Slider-->
@@ -1122,75 +1623,203 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tenetur dolor
       </div>
     </div>
     <!-- #sidenav-->
+    <!-- ! * Back Call *-->
+    <div id="back-call" tabindex="-1" role="dialog" aria-labelledby="back-call" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Обратный звонок</div>
+              <div class="l">Перезвоним за 10 секунд</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <p>Ваше имя</p>
+            <p>
+              <input type="text" name="name" class="styler">
+            </p>
+            <p>Телефон</p>
+            <p>
+              <input id="phone" type="text" name="phone" class="styler">
+            </p>
+            <p>
+              <div class="button send inline-block">
+                <button type="button" class="btn btn-brand-gradient">
+                  <div class="label">ОТПРАВИТЬ</div>
+                </button>
+              </div>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Buy Single Click *-->
+    <div id="buy-single-click" tabindex="-1" role="dialog" aria-labelledby="buy-single-click" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Купить в один клик</div>
+              <div class="l">Введите номер и мы сразу же презвоним</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <div class="col-sm-7">
+              <div class="row">
+                <input id="phone" type="text" name="phone" class="styler">
+              </div>
+            </div>
+            <div class="col-sm-5 button send inline-block">
+              <div class="row">
+                <button type="button" class="btn btn-brand-gradient">
+                  <div class="label">ОТПРАВИТЬ</div>
+                </button>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Added To Cart. *-->
+    <div id="added-to-cart" tabindex="-1" role="dialog" aria-labelledby="added-to-cart" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="added-product">
+              <div class="col-xs-3 text-right">
+                <div class="row">
+                  <div class="height preview-2"><img src="image/export/preview-in-added-to-cart.png" alt=""></div>
+                </div>
+              </div>
+              <div class="col-xs-9">
+                <div class="product-title"><a href="#">Jonson&co G400 RDS</a></div>
+                <div class="product-label">Товар был успешно добавлен в корзину.</div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="bottons">
+              <div class="col-xs-6">
+                <div class="row"><a href="#Сыылка_ссылка_на_страницу_заказа" class="btn btn-bright-color">
+                    <div class="label">Оформить заказ</div></a></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="row">
+                  <botton data-dismiss="modal" class="btn btn-bright-color">
+                    <div class="label">Продолжить покупки</div>
+                  </botton>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <div class="border"></div>
+            <div class="modal-title text-center">
+              <div class="h">Купить в один клик</div>
+              <div class="l">Введите номер и мы сразу же презвоним</div>
+            </div><br>
+            <div class="col-sm-7">
+              <div class="row">
+                <input id="phone" type="text" name="phone" class="styler">
+              </div>
+            </div>
+            <div class="col-sm-5 button send inline-block">
+              <div class="row">
+                <button type="button" class="btn btn-brand-gradient">
+                  <div class="label">ОТПРАВИТЬ</div>
+                </button>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ! * search-results *-->
+      <div class="search-results">
+        <ul class="autocompletion">
+          <p>Ничните вводить</p>
+        </ul>
+        <ul class="results">
+          <p>Ничните вводить</p>
+        </ul>
+        <div class="test"></div>
+      </div>
+    </div>
     <!-- ! * Scripts * -->
-    <script src="catalog/view/theme/GitarLand/assets/js/scripts-dist.js"></script>
-    <!-- * ! scripts-dist.js include:
-    *      ./jquery-3.1.0.js
-    *      ../lib/OwlCarousel-SASS/owl.carousel.js
-    *      ./user.js
-    *      ./action.js
-    -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="catalog/view/javascript/myjs.js"></script>
+    <script src="catalog/view/javascript/sfilter.js"></script>
+    <script src="catalog/view/theme/GitarLand/assets/lib/jQueryFormStyler-master/jquery.formstyler.js"></script>
+    <script src="catalog/view/theme/GitarLand/assets/js/user.js"></script>
+    <script src="catalog/view/theme/GitarLand/assets/js/action.js"></script>
     <script type="text/javascript">
-      // * Side Nav *
-      function openNav() {
-          document.getElementById("overlay-element").style.display = "block";
-          document.getElementById("sidenav").style.right= "0";
-      }
+      // Action OwlCarousel
+       $(document).ready(function() {
+         $("#home-slider").owlCarousel({
+             items: 1,
+             nav: true,
+             navText: ["",""],
+             autoplay: true
+         });
+         $("#review-slider").owlCarousel({
+             items: 1,
+             nav: true,
+             navText: ["",""],
+             autoplay: true
+         });
+         $("#review-carusel").owlCarousel({
+             items: 1,
+             nav: true,
+             navText: ["",""],
+             autoplay: true
+         });
+       });
       
-      function closeNav() {
-          document.getElementById("overlay-element").style.display = "none";
-          document.getElementById("sidenav").style.right = "-250px";
-      }
-    </script>
-    <script type="text/javascript">
-      // * Sidenav Menu *
-      $(document).ready(function() {
-        $('.sidenav-menu .sub>a').click(function(event) {
-          $('.sidenav-menu>ul').css({
-            marginLeft: '-100%'
-          });
-          $(this).addClass('open');
-          return false;
-        });
+       // Action jQuery Form Styler
+       $(document).ready(function() {
+         $('.styler').styler({
+           selectSmartPositioning: false
+         });
+       });
+       
+       // Action jquery.maskedinput.js
+       $(document).ready(function() {
+          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__");
+       });
       
-        $('.sidenav-menu .back>a').click(function() {
-          $('.sidenav-menu>ul').css({
-            marginLeft: '0'
-          });
-          $('.sidenav-menu .sub>a.open').removeClass('open');
-          return false;
-        });
-      });
-      
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#home-slider").owlCarousel({
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            //- autoPlay : 5000,
-            navigationText:  ["",""]
-        });
-        $("#review-slider").owlCarousel({
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            //- autoPlay : 5000,
-            navigationText:  ["",""]
-        });
-        $("#review-carusel").owlCarousel({
-            theme : "review-carusel-theme",
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            //- autoPlay : 5000,
-            navigationText:  ["",""]
-        });
-      });
+       // Action Colorbox
+         $(document).ready(function(){
+             //Examples of how to assign the Colorbox event to elements
+             $(".group1").colorbox({rel:'group1'});
+             $(".group2").colorbox({rel:'group2', transition:"fade"});
+             $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+             $(".group4").colorbox({rel:'group4', slideshow:true});
+             $(".ajax").colorbox();
+             $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+             $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+             $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+             $(".inline").colorbox({inline:true, width:"50%"});
+             $(".callbacks").colorbox({
+             onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+             onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+             onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+             onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+             onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+             });
+             $('.non-retina').colorbox({rel:'group5', transition:'none'})
+             $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+             //Example of preserving a JavaScript event for inline calls.
+             $("#click").click(function(){
+             $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+             return false;
+           });
+         });
     </script>
     <!-- End body-->
   </body>

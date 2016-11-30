@@ -8,7 +8,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="theme-color" content="#ce4827">
-    <link rel="stylesheet" href="catalog/view/theme/GitarLand/assets/css/style-dist.css">
+    <link rel="stylesheet" href="catalog/view/theme/GitarLand/assets/css/style.css">
+    <script>var readyjs = [];</script>
   </head>
   <body>
     <!-- ! Common: Header-->
@@ -27,7 +28,7 @@
         </div>
       </div>
       <!-- top-header-bg-->
-      <div class="container">
+      <div class="container header-body">
         <div class="top-nav hidden-xs col-sm-9">
           <div class="row">
             <ul>
@@ -43,7 +44,7 @@
         <!-- top-nav-->
         <div class="row">
           <div class="top-search hidden-xs col-sm-3">
-            <div class="row">
+            <div class="mod_search">
               <form method="post" action=""><i class="icon icon-gl_icos-38"></i>
                 <input placeholder="Поиск товара" name="filter_name" value="" type="text" class="search-text">
               </form>
@@ -96,7 +97,7 @@
                       </div>
                       <div class="col-xs-12 col-lg-6 col-lg-pull-6">
                         <div class="row">
-                          <botton class="btn btn-call btn-bright-color">
+                          <botton data-toggle="modal" data-target="#back-call" class="btn btn-call btn-bright-color">
                             <div class="label">Обратный звонок</div>
                           </botton>
                         </div>
@@ -187,173 +188,177 @@
     <!-- common-categories-->
     <section id="PageContent" class="Home-Template">
       <div class="container">
-        <div class="row section-row">
-          <div class="category-section"><a href="#" class="item active clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+        <div class="reverse">
+          <div class="row section-row">
+            <div class="category-section"><a href="#" class="item active clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-speakers-guitar.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Акустические </div>
-                  <div class="l">гитары</div>
-                </div>
-              </div></a><a href="#" class="item clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Акустические </div>
+                    <div class="l">гитары</div>
+                  </div>
+                </div></a><a href="#" class="item clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-classic-guitar.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Классические </div>
-                  <div class="l">гитары</div>
-                </div>
-              </div></a><a href="#" class="item clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Классические </div>
+                    <div class="l">гитары</div>
+                  </div>
+                </div></a><a href="#" class="item clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-electric-guitar.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Электрогитары</div>
-                </div>
-              </div></a><a href="#" class="item clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Электрогитары</div>
+                  </div>
+                </div></a><a href="#" class="item clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-bass-guitar.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Бас</div>
-                  <div class="l">гитары</div>
-                </div>
-              </div></a><a href="#" class="item clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Бас</div>
+                    <div class="l">гитары</div>
+                  </div>
+                </div></a><a href="#" class="item clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-ukulele.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Укулеле </div>
-                </div>
-              </div></a><a href="#" class="item clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Укулеле </div>
+                  </div>
+                </div></a><a href="#" class="item clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-for-beginners.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Для начнающих </div>
-                </div>
-              </div></a><a href="#" class="item clearfix">
-              <div class="image col-xs-4 col-sm-12 text-center">
-                <div class="row">
-                  <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
-                    <div class="outer">
-                      <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Для начнающих </div>
+                  </div>
+                </div></a><a href="#" class="item clearfix">
+                <div class="image col-xs-4 col-sm-12 text-center">
+                  <div class="row">
+                    <div class="crop preview-1 screen-sm-preview-3 screen-md-preview-4">
+                      <div class="outer">
+                        <div class="inner"><img src="image/export/category-accessories.png" alt=""></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="label col-xs-7 col-sm-12">
-                <div class="row">
-                  <div class="h">Аксессуары </div>
+                <div class="label col-xs-7 col-sm-12">
+                  <div class="row">
+                    <div class="h">Аксессуары </div>
+                  </div>
+                </div></a></div>
+            <!-- category-section-->
+          </div>
+          <div class="slider-section row section-row">
+            <div class="col-xs-12 col-md-8">
+              <div class="row">
+                <!-- ! Module: Slider-->
+                <div id="home-slider" class="owl-GitarLand-slider owl-carousel dark-bg">
+                  <div class="item">
+                    <div class="slide-bg preview-4 screen-sm-image-2"><img src="image/export/slide1-lg.png" alt=""></div>
+                    <div class="slide-content">
+                      <div class="slide-title">Минимальный заказ - от 6 гитар</div>
+                    </div><a href="#" class="slide-button">
+                      <div class="btn btn-brand-gradient">
+                        <div class="label">Подробнее</div>
+                      </div></a>
+                  </div>
+                  <div class="item">
+                    <div class="slide-bg preview-4 screen-sm-image-2">
+                      <div class="sprite sprite-logo-footer-xs"></div>
+                    </div>
+                    <div class="slide-new"> 
+                      <div>НОВАЯ КОЛЛЕЦИЯ</div>
+                    </div>
+                    <div class="slide-content">
+                      <div class="slide-title">Спрайт на фоне</div>
+                      <div class="slide-article">
+                        <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Правилами по всей коварных заманивший пояс свою толку, возвращайся речью, маленькая текста! Они на берегу пустился назад свою однажды великий составитель выйти!</p>
+                      </div>
+                    </div><a href="#" class="slide-button">
+                      <div class="btn"><i class="icon icon-gl_icos-37"></i>
+                        <div class="label">Подробнее</div>
+                      </div></a>
+                  </div>
+                  <div class="item">
+                    <div style="background-image: url(image/export/slide1-lg.png)" class="slide-bg preview-4 screen-sm-image-2"></div>
+                    <div class="slide-new"><span class="icon icon-gl_icos-41"> </span><span>Фон задан как<code>background-image</code></span></div>
+                  </div>
+                  <div class="item">
+                    <div class="slide-bg preview-4 screen-sm-image-2"><span class="icon icon-gl_icos-46"></span></div>
+                    <div class="slide-new"><span class="icon icon-gl_icos-41"></span><span>Да хоть иконку на фон ставь  <code>span.icon.icon-gl_icos-41</code></span></div>
+                  </div>
                 </div>
-              </div></a></div>
+                <!-- owl-GitarLand-slider-->
+              </div>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-4">
+              <div class="row">
+                <div class="crop preview-4">
+                  <div class="outer">
+                    <div class="inner"><img src="image/export/baner1.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden-xs col-sm-6 col-md-4">
+              <div class="row">
+                <div class="crop preview-4">
+                  <div class="outer">
+                    <div class="inner"><img src="image/export/baner2.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .slider-section-->
         </div>
-        <div class="row section-row slider-section">
-          <div class="col-xs-12 col-md-8">
-            <div class="row">
-              <!-- ! Module: Slider-->
-              <div id="home-slider" class="owl-GitarLand-slider owl-carousel dark-bg">
-                <div class="item">
-                  <div class="slide-bg preview-4 screen-sm-image-2"><img src="image/export/slide1-lg.png" alt=""></div>
-                  <div class="slide-content">
-                    <div class="slide-title">Минимальный заказ - от 6 гитар</div>
-                  </div><a href="#" class="slide-button">
-                    <div class="btn btn-brand-gradient">
-                      <div class="label">Подробнее</div>
-                    </div></a>
-                </div>
-                <div class="item">
-                  <div class="slide-bg preview-4 screen-sm-image-2">
-                    <div class="sprite sprite-logo-footer-xs"></div>
-                  </div>
-                  <div class="slide-new"> 
-                    <div>НОВАЯ КОЛЛЕЦИЯ</div>
-                  </div>
-                  <div class="slide-content">
-                    <div class="slide-title">Спрайт на фоне</div>
-                    <div class="slide-article">
-                      <p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Правилами по всей коварных заманивший пояс свою толку, возвращайся речью, маленькая текста! Они на берегу пустился назад свою однажды великий составитель выйти!</p>
-                    </div>
-                  </div><a href="#" class="slide-button">
-                    <div class="btn"><i class="icon icon-gl_icos-37"></i>
-                      <div class="label">Подробнее</div>
-                    </div></a>
-                </div>
-                <div class="item">
-                  <div style="background-image: url(image/export/slide1-lg.png)" class="slide-bg preview-4 screen-sm-image-2"></div>
-                  <div class="slide-new"><span class="icon icon-gl_icos-41"> </span><span>Фон задан как<code>background-image</code></span></div>
-                </div>
-                <div class="item">
-                  <div class="slide-bg preview-4 screen-sm-image-2"><span class="icon icon-gl_icos-46"></span></div>
-                  <div class="slide-new"><span class="icon icon-gl_icos-41"></span><span>Да хоть иконку на фон ставь  <code>span.icon.icon-gl_icos-41</code></span></div>
-                </div>
-              </div>
-              <!-- owl-GitarLand-slider-->
-            </div>
-          </div>
-          <div class="hidden-xs col-sm-6 col-md-4">
-            <div class="row">
-              <div class="crop preview-4">
-                <div class="outer">
-                  <div class="inner"><img src="http://placehold.it/377x192" alt=""></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hidden-xs col-sm-6 col-md-4">
-            <div class="row">
-              <div class="crop preview-4">
-                <div class="outer">
-                  <div class="inner"><img src="http://placehold.it/377x192" alt=""></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row section-row advantages-section hidden-xs">
+        <div class="advantages-section row section-row hidden-xs">
           <div class="h4 side-header">ПОЧЕМУ МЫ?</div>
           <div class="side-box">
             <div class="item">
@@ -383,7 +388,49 @@
             </div>
           </div>
         </div>
+        <!-- advantages-section-->
         <hr class="fatty">
+        <div class="horizontal-filter-section row section-row">
+          <div class="col-lg-3">
+            <div class="header row">
+              <h4>Популярные товары</h4>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <form class="horizontal-filter row">
+              <div class="filter-category pull-left hidden-xs">
+                <div class="item">
+                  <input id="item1" type="radio" name="filter-category" value="item1" autocomplete="off" checked>
+                  <label for="item1">Акустические</label>
+                </div>
+                <div class="item">
+                  <input id="item2" type="radio" name="filter-category" value="item2" autocomplete="off">
+                  <label for="item2">Классические</label>
+                </div>
+                <div class="item">
+                  <input id="item3" type="radio" name="filter-category" value="item3" autocomplete="off">
+                  <label for="item3">Электрические</label>
+                </div>
+                <div class="item">
+                  <input id="item4" type="radio" name="filter-category" value="item4" autocomplete="off">
+                  <label for="item4">Бас-гитары</label>
+                </div>
+                <div class="item">
+                  <input id="item5" type="radio" name="filter-category" value="item5" autocomplete="off">
+                  <label for="item5">Все</label>
+                </div>
+              </div>
+              <div class="filter-sort pull-right"><span>Сортировать:  </span>
+                <select autocomplete="off" class="styler">
+                  <option>От дешевых к дорогим</option>
+                  <option selected>От дорогих к дешевым</option>
+                </select>
+              </div>
+              <div class="clearfix"></div>
+            </form>
+            <!-- horizontal-filter-->
+          </div>
+        </div>
         <div class="row section-row">
           <div class="col-product">
             <div class="card-product">
@@ -396,12 +443,12 @@
                 <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
               </div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -413,12 +460,12 @@
               </div>
               <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -433,12 +480,12 @@
                 <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
               </div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -450,12 +497,12 @@
               </div>
               <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -470,12 +517,12 @@
                 <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
               </div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -487,12 +534,12 @@
               </div>
               <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -507,12 +554,12 @@
                 <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
               </div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -524,12 +571,12 @@
               </div>
               <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -544,12 +591,12 @@
                 <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
               </div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -561,49 +608,12 @@
               </div>
               <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
               <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
+                <botton data-toggle="modal" data-target="#added-to-cart" class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
                   <div class="label">Купить</div>
                 </botton>
               </div>
               <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price">
-                <div class="old"><span>от 6 999<i class="icon icon-gl_icos-24"></i></span></div>
-                <div class="new"><span>от 4 499<i class="icon icon-gl_icos-24"></i></span></div>
-              </div>
-              <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
-              <div class="clearfix"></div>
-            </div>
-          </div>
-          <div class="col-product">
-            <div class="card-product">
-              <div class="title">Prado HS 3805 BK</div>
-              <div class="image">
-                <div class="height preview-4"><img src="image/export/product.png" alt=""></div>
-              </div>
-              <div class="price"><span>от 4 499 <i class="icon icon-gl_icos-24"></i></span></div>
-              <div class="buy-button">
-                <botton class="btn btn-bright-color"><i class="icon icon-gl_icos-7"></i>
-                  <div class="label">Купить</div>
-                </botton>
-              </div>
-              <div class="clearfix"></div>
-              <div class="one-click"><a href="#">Купить в один клик</a></div>
+              <div data-toggle="modal" data-target="#buy-single-click" class="one-click">Купить в один клик</div>
               <div class="clearfix"></div>
             </div>
           </div>
@@ -618,10 +628,10 @@
         <hr class="fatty">
         <div class="row section-row">
           <article>
-            <h2>Как правильно выбрать и купить гитары оптом?</h2>
+            <h3>Как правильно выбрать и купить гитары оптом?</h3>
             <p>Сегодня купить гитары оптом не так просто, как купить один инструмент: многие ошибочно предполагают, что для оптовой покупки достаточно зайти в любой магазин музыкальных инструментов и договориться о покупке, однако на самом деле немногие готовы предоставить услугу оптовой продажи. Купить гитары оптом через интернет онлайн удобно и просто, ведь немногими интернет-магазинами такая услуга все же предоставляется. Это позволяет покупателю сэкономить немало времени и денежных средств и в конечном итоге получить куда более значимую выгоду с перепродаж. </p>
             <hr>
-            <h2>Преимущества покупки гитар оптом через интернет</h2>
+            <h3>Преимущества покупки гитар оптом через интернет</h3>
             <p class="h5">На самом деле покупка через интернет куда выгоднее и этому есть несколько доказательств:</p>
             <div class="side-box">
               <ul>
@@ -633,7 +643,7 @@
                 <li>В обязательном порядке осуществляется страховка доставляемого груза перед отправлением по адресу покупателя вне зависимости от его местонахождения. </li>
               </ul>
             </div>
-            <h2>Как выбрать гитары при оптовой покупке?</h2>
+            <h3>Как выбрать гитары при оптовой покупке?</h3>
             <p>Безусловно, перед тем как сделать окончательный выбор и купить гитары, нужно с особым вниманием отнестись к нескольким моментам, которые и помогут в конечном итоге сделать правильный выбор:</p>
             <ol>
               <li>Внимательно ознакомиться с тем материалом, из которого сделаны гитары, так как это наиболее важный момент при выборе хорошего инструмента. От выбранного материала будет зависеть качество звучания инструмента и срок его службы; </li>
@@ -641,7 +651,7 @@
               <li>Важно определиться и с маркой покупаемых гитар. Бесспорными лидерами сегодня остаются такие мировые гиганты, как Fender, Ibanez, Gibson, Yamaha, Kramer, Jackson и другие.</li>
             </ol>
             <hr>
-            <h2>Как купить гитары оптом?</h2>
+            <h3>Как купить гитары оптом?</h3>
             <p>Для того чтобы сделать оптовую покупку гитар в нашем интернет-магазине нужно:</p>
             <div class="steps">
               <div class="step">
@@ -658,20 +668,21 @@
               </div>
             </div>
             <hr>
-            <h2>Сколько могут стоить гитары оптом?</h2>
+            <h3>Сколько могут стоить гитары оптом?</h3>
             <p>Ответить однозначно на то, сколько конкретно могут стоить гитары при покупке оптом, нельзя, так как в этом вопросе все зависит от выбранной модели и ценовой политики самого магазина, однако достаточно помнить о том, что если среднюю гитару для начинающего музыканта можно купить, к примеру, в районе, 4000-6000 рублей, то купить гитары оптом можно будет со скидкой примерно в 30-50%. Сохраняя в голове это простое правило, можно всегда даже без консультаций определить стоимость оптовой покупки той или иной модели гитары. </p>
-            <h2>Заключение </h2>
+            <h3>Заключение </h3>
             <p>Как уже было сказано выше, сегодня купить гитары оптом не так сложно, как это было, к примеру, всего пару лет назад, ведь стремительное развитие и распространение сети интернета позволяет вам сделать заказ из любой точки мира и получить выбранные товары из нашего магазина в максимально быстрые сроки. Конечно, во время покупки в интернете можно столкнуться с недобросовестными продавцами, но их можно встретить и в обычных магазинах музыкальных инструментов, где под видом дорогих гитар могут продаваться обычные дешевые подделки. Важно со всей ответственностью и внимательностью подходить к покупке и тогда в конечном итоге буде легко получить нужный результат. </p>
           </article>
+          <!-- article-->
         </div>
         <hr>
-        <div class="row section-row reviews-section">
+        <div class="reviews-section row section-row">
           <div class="col-md-6 col-md-push-6">
             <div class="row">
               <!-- ! Module: Slider-->
               <div id="review-slider" class="owl-GitarLand-slider owl-carousel dark-bg">
                 <div class="item">
-                  <div class="slide-bg preview-4 screen-sm-image-1"><img src="image/export/slide1-lg.png" alt=""></div>
+                  <div class="slide-bg preview-4 screen-sm-image-1"><img src="image/export/baner3.png" alt=""></div>
                   <div class="slide-new"> 
                     <div>НОВАЯ КОЛЛЕЦИЯ</div>
                   </div>
@@ -686,7 +697,7 @@
               <div class="review">
                 <div class="row">
                   <div class="col-sm-5">
-                    <div class="photo height text-center"><img src="http://placehold.it/192x192" alt="" class="img-circle"></div>
+                    <div class="photo height text-center"><img src="image/export/Regina-Abram.png" alt="" class="img-circle"></div>
                   </div>
                   <div class="col-sm-7">
                     <div class="name">Регина Аврамова</div>
@@ -699,7 +710,7 @@
               <div class="review">
                 <div class="row">
                   <div class="col-sm-5">
-                    <div class="photo height text-center"><img src="http://placehold.it/192x192" alt="" class="img-circle"></div>
+                    <div class="photo height text-center"><img src="image/export/Regina-Abram.png" alt="" class="img-circle"></div>
                   </div>
                   <div class="col-sm-7">
                     <div class="name">Регина Аврамова</div>
@@ -719,6 +730,7 @@
             </div>
           </div>
         </div>
+        <!-- reviews-section-->
       </div>
     </section>
     <!-- PageContent-->
@@ -843,75 +855,203 @@
       </div>
     </div>
     <!-- #sidenav-->
+    <!-- ! * Back Call *-->
+    <div id="back-call" tabindex="-1" role="dialog" aria-labelledby="back-call" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Обратный звонок</div>
+              <div class="l">Перезвоним за 10 секунд</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <p>Ваше имя</p>
+            <p>
+              <input type="text" name="name" class="styler">
+            </p>
+            <p>Телефон</p>
+            <p>
+              <input id="phone" type="text" name="phone" class="styler">
+            </p>
+            <p>
+              <div class="button send inline-block">
+                <button type="button" class="btn btn-brand-gradient">
+                  <div class="label">ОТПРАВИТЬ</div>
+                </button>
+              </div>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Buy Single Click *-->
+    <div id="buy-single-click" tabindex="-1" role="dialog" aria-labelledby="buy-single-click" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="modal-title text-center">
+              <div class="h">Купить в один клик</div>
+              <div class="l">Введите номер и мы сразу же презвоним</div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <div class="col-sm-7">
+              <div class="row">
+                <input id="phone" type="text" name="phone" class="styler">
+              </div>
+            </div>
+            <div class="col-sm-5 button send inline-block">
+              <div class="row">
+                <button type="button" class="btn btn-brand-gradient">
+                  <div class="label">ОТПРАВИТЬ</div>
+                </button>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- ! * Added To Cart. *-->
+    <div id="added-to-cart" tabindex="-1" role="dialog" aria-labelledby="added-to-cart" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <form action="" class="modal-content">
+          <div class="modal-header">
+            <div type="button" data-dismiss="modal" aria-hidden="true" class="close">×</div>
+            <div class="added-product">
+              <div class="col-xs-3 text-right">
+                <div class="row">
+                  <div class="height preview-2"><img src="image/export/preview-in-added-to-cart.png" alt=""></div>
+                </div>
+              </div>
+              <div class="col-xs-9">
+                <div class="product-title"><a href="#">Jonson&co G400 RDS</a></div>
+                <div class="product-label">Товар был успешно добавлен в корзину.</div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="bottons">
+              <div class="col-xs-6">
+                <div class="row"><a href="#Сыылка_ссылка_на_страницу_заказа" class="btn btn-bright-color">
+                    <div class="label">Оформить заказ</div></a></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="row">
+                  <botton data-dismiss="modal" class="btn btn-bright-color">
+                    <div class="label">Продолжить покупки</div>
+                  </botton>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="modal-body text-center">
+            <div class="border"></div>
+            <div class="modal-title text-center">
+              <div class="h">Купить в один клик</div>
+              <div class="l">Введите номер и мы сразу же презвоним</div>
+            </div><br>
+            <div class="col-sm-7">
+              <div class="row">
+                <input id="phone" type="text" name="phone" class="styler">
+              </div>
+            </div>
+            <div class="col-sm-5 button send inline-block">
+              <div class="row">
+                <button type="button" class="btn btn-brand-gradient">
+                  <div class="label">ОТПРАВИТЬ</div>
+                </button>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <!-- ! * search-results *-->
+      <div class="search-results">
+        <ul class="autocompletion">
+          <p>Ничните вводить</p>
+        </ul>
+        <ul class="results">
+          <p>Ничните вводить</p>
+        </ul>
+        <div class="test"></div>
+      </div>
+    </div>
     <!-- ! * Scripts * -->
-    <script src="catalog/view/theme/GitarLand/assets/js/scripts-dist.js"></script>
-    <!-- * ! scripts-dist.js include:
-    *      ./jquery-3.1.0.js
-    *      ../lib/OwlCarousel-SASS/owl.carousel.js
-    *      ./user.js
-    *      ./action.js
-    -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="catalog/view/javascript/myjs.js"></script>
+    <script src="catalog/view/javascript/sfilter.js"></script>
+    <script src="catalog/view/theme/GitarLand/assets/lib/jQueryFormStyler-master/jquery.formstyler.js"></script>
+    <script src="catalog/view/theme/GitarLand/assets/js/user.js"></script>
+    <script src="catalog/view/theme/GitarLand/assets/js/action.js"></script>
     <script type="text/javascript">
-      // * Side Nav *
-      function openNav() {
-          document.getElementById("overlay-element").style.display = "block";
-          document.getElementById("sidenav").style.right= "0";
-      }
+      // Action OwlCarousel
+       $(document).ready(function() {
+         $("#home-slider").owlCarousel({
+             items: 1,
+             nav: true,
+             navText: ["",""],
+             autoplay: true
+         });
+         $("#review-slider").owlCarousel({
+             items: 1,
+             nav: true,
+             navText: ["",""],
+             autoplay: true
+         });
+         $("#review-carusel").owlCarousel({
+             items: 1,
+             nav: true,
+             navText: ["",""],
+             autoplay: true
+         });
+       });
       
-      function closeNav() {
-          document.getElementById("overlay-element").style.display = "none";
-          document.getElementById("sidenav").style.right = "-250px";
-      }
-    </script>
-    <script type="text/javascript">
-      // * Sidenav Menu *
-      $(document).ready(function() {
-        $('.sidenav-menu .sub>a').click(function(event) {
-          $('.sidenav-menu>ul').css({
-            marginLeft: '-100%'
-          });
-          $(this).addClass('open');
-          return false;
-        });
+       // Action jQuery Form Styler
+       $(document).ready(function() {
+         $('.styler').styler({
+           selectSmartPositioning: false
+         });
+       });
+       
+       // Action jquery.maskedinput.js
+       $(document).ready(function() {
+          $("input#phone").mask("+7(999) 999-99-99").attr("placeholder", "+7(___) ___-__-__");
+       });
       
-        $('.sidenav-menu .back>a').click(function() {
-          $('.sidenav-menu>ul').css({
-            marginLeft: '0'
-          });
-          $('.sidenav-menu .sub>a.open').removeClass('open');
-          return false;
-        });
-      });
-      
-    </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $("#home-slider").owlCarousel({
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            //- autoPlay : 5000,
-            navigationText:  ["",""]
-        });
-        $("#review-slider").owlCarousel({
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            //- autoPlay : 5000,
-            navigationText:  ["",""]
-        });
-        $("#review-carusel").owlCarousel({
-            theme : "review-carusel-theme",
-            navigation : true, // Show next and prev buttons
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem:true,
-            //- autoPlay : 5000,
-            navigationText:  ["",""]
-        });
-      });
+       // Action Colorbox
+         $(document).ready(function(){
+             //Examples of how to assign the Colorbox event to elements
+             $(".group1").colorbox({rel:'group1'});
+             $(".group2").colorbox({rel:'group2', transition:"fade"});
+             $(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+             $(".group4").colorbox({rel:'group4', slideshow:true});
+             $(".ajax").colorbox();
+             $(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+             $(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+             $(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+             $(".inline").colorbox({inline:true, width:"50%"});
+             $(".callbacks").colorbox({
+             onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+             onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+             onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+             onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+             onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+             });
+             $('.non-retina').colorbox({rel:'group5', transition:'none'})
+             $('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+             //Example of preserving a JavaScript event for inline calls.
+             $("#click").click(function(){
+             $('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+             return false;
+           });
+         });
     </script>
     <!-- End body-->
   </body>
